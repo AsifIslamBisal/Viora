@@ -7,5 +7,6 @@ export { Textarea } from "./components/Textarea/Textarea";
 export { Card } from "./components/Card/Card";
 export { Checkbox } from "./components/Checkbox/Checkbox";
 export { Select } from "./components/Select/Select";
+export { Switch } from "./components/Switch/Switch";
 
 export const VERSION = "0.1.0";

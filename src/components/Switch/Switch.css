@@ -1,0 +1,92 @@
+@import "../../styles/fields.css";
+
+.viora-switch {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--viora-spacing-sm);
+  font-family: var(--viora-font-family);
+  cursor: pointer;
+}
+
+.viora-switch__input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.viora-switch__track {
+  position: relative;
+  flex-shrink: 0;
+  width: 36px;
+  height: 20px;
+  border: 1px solid transparent;
+  border-radius: var(--viora-radius-full);
+  background: var(--viora-border-strong);
+  transition: background-color var(--viora-transition-fast);
+}
+
+.viora-switch__thumb {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 14px;
+  height: 14px;
+  border-radius: var(--viora-radius-full);
+  background: var(--viora-surface);
+  box-shadow: var(--viora-shadow-sm);
+  transition: transform var(--viora-transition-fast);
+}
+
+.viora-switch__label {
+  font-size: var(--viora-font-size-sm);
+  line-height: 1.4;
+  color: var(--viora-foreground);
+}
+
+.viora-switch__input:checked + .viora-switch__track {
+  background: var(--viora-primary);
+}
+
+.viora-switch__input:checked + .viora-switch__track .viora-switch__thumb {
+  transform: translateX(16px);
+}
+
+.viora-switch__input:not(:disabled):hover + .viora-switch__track {
+  background: var(--viora-border-hover);
+}
+
+.viora-switch__input:checked:not(:disabled):hover + .viora-switch__track {
+  background: var(--viora-primary-hover);
+}
+
+.viora-switch__input:focus-visible + .viora-switch__track {
+  outline: 2px solid var(--viora-focus-ring);
+  outline-offset: 2px;
+}
+
+.viora-switch__input:disabled ~ .viora-switch__track {
+  background: var(--viora-muted);
+  cursor: not-allowed;
+}
+
+.viora-switch__input:disabled ~ .viora-switch__label {
+  color: var(--viora-muted-foreground);
+  cursor: not-allowed;
+}
+
+.viora-switch--error .viora-switch__track {
+  border-color: var(--viora-danger);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .viora-switch__track,
+  .viora-switch__thumb {
+    transition: none;
+  }
+}
