@@ -25,5 +25,6 @@ export { Divider } from "./components/Divider/Divider";
 export { List } from "./components/List/List";
 export { Tag } from "./components/Tag/Tag";
 export { Accordion } from "./components/Accordion/Accordion";
+export { Progress } from "./components/Progress/Progress";
 
 export const VERSION = "0.1.0";

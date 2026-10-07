@@ -1,0 +1,74 @@
+.viora-progress {
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  gap: var(--viora-spacing-md);
+  font-family: var(--viora-font-family);
+}
+
+.viora-progress__track {
+  flex: 1;
+  height: 8px;
+  background-color: var(--viora-border);
+  border-radius: var(--viora-radius-full);
+  overflow: hidden;
+}
+
+.viora-progress--sm .viora-progress__track {
+  height: 4px;
+}
+
+.viora-progress--lg .viora-progress__track {
+  height: 12px;
+}
+
+.viora-progress__fill {
+  height: 100%;
+  background-color: var(--viora-primary);
+  border-radius: var(--viora-radius-full);
+  transition: width var(--viora-transition);
+}
+
+.viora-progress--success .viora-progress__fill {
+  background-color: var(--viora-success);
+}
+
+.viora-progress--warning .viora-progress__fill {
+  background-color: var(--viora-warning);
+}
+
+.viora-progress--danger .viora-progress__fill {
+  background-color: var(--viora-danger);
+}
+
+.viora-progress__value {
+  flex: none;
+  min-width: 3ch;
+  font-size: var(--viora-font-size-sm);
+  font-weight: 500;
+  color: var(--viora-muted-foreground);
+  text-align: right;
+}
+
+.viora-progress--indeterminate .viora-progress__fill {
+  width: 40% !important;
+  animation: viora-progress-indeterminate 1.2s ease-in-out infinite;
+}
+
+@keyframes viora-progress-indeterminate {
+  0% {
+    transform: translateX(-120%);
+  }
+
+  100% {
+    transform: translateX(350%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .viora-progress__fill,
+  .viora-progress--indeterminate .viora-progress__fill {
+    transition: none;
+    animation: none;
+  }
+}
