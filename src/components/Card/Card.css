@@ -1,0 +1,52 @@
+.viora-card {
+  box-sizing: border-box;
+  background: var(--viora-surface);
+  border: 1px solid var(--viora-border);
+  border-radius: var(--viora-radius-lg);
+  box-shadow: var(--viora-shadow-sm);
+  font-family: var(--viora-font-family);
+  color: var(--viora-foreground);
+}
+
+.viora-card__header {
+  margin-bottom: var(--viora-spacing-xs);
+}
+
+.viora-card__title {
+  margin: 0;
+  font-size: var(--viora-font-size-lg);
+  font-weight: 600;
+  color: var(--viora-foreground);
+}
+
+.viora-card__description {
+  margin: var(--viora-spacing-xs) 0 0;
+  font-size: var(--viora-font-size-sm);
+  line-height: 1.6;
+  color: var(--viora-muted-foreground);
+}
+
+.viora-card__content {
+  font-size: var(--viora-font-size-sm);
+  line-height: 1.6;
+}
+
+.viora-card__footer {
+  margin-top: var(--viora-spacing-md);
+}
+
+.viora-card--padding-none {
+  padding: 0;
+}
+
+.viora-card--padding-sm {
+  padding: var(--viora-spacing-sm);
+}
+
+.viora-card--padding-md {
+  padding: var(--viora-spacing-md);
+}
+
+.viora-card--padding-lg {
+  padding: var(--viora-spacing-lg);
+}
