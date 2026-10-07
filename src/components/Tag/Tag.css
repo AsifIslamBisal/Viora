@@ -1,0 +1,91 @@
+.viora-tag {
+  box-sizing: border-box;
+  display: inline-flex;
+  align-items: center;
+  gap: var(--viora-spacing-xs);
+  padding: 2px 10px;
+  border: 1px solid transparent;
+  border-radius: var(--viora-radius-full);
+  font-family: var(--viora-font-family);
+  font-size: var(--viora-font-size-sm);
+  font-weight: 500;
+  line-height: 1.5;
+  color: var(--viora-secondary-foreground);
+  background-color: var(--viora-secondary);
+}
+
+.viora-tag--sm {
+  padding: 0 8px;
+  font-size: var(--viora-font-size-xs);
+}
+
+.viora-tag--primary {
+  background-color: var(--viora-primary-soft);
+  color: var(--viora-primary-soft-foreground);
+}
+
+.viora-tag--success {
+  background-color: var(--viora-success-soft);
+  color: var(--viora-success-soft-foreground);
+}
+
+.viora-tag--warning {
+  background-color: var(--viora-warning-soft);
+  color: var(--viora-warning-soft-foreground);
+}
+
+.viora-tag--danger {
+  background-color: var(--viora-danger-soft);
+  color: var(--viora-danger-soft-foreground);
+}
+
+.viora-tag--info {
+  background-color: var(--viora-info-soft);
+  color: var(--viora-info-soft-foreground);
+}
+
+.viora-tag__label {
+  white-space: nowrap;
+}
+
+.viora-tag__remove {
+  box-sizing: border-box;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 18px;
+  height: 18px;
+  padding: 0;
+  border: none;
+  border-radius: var(--viora-radius-full);
+  background: transparent;
+  color: inherit;
+  cursor: pointer;
+  transition: background-color var(--viora-transition-fast),
+    opacity var(--viora-transition-fast);
+}
+
+.viora-tag__remove:hover {
+  background-color: color-mix(in srgb, currentColor 15%, transparent);
+}
+
+.viora-tag__remove:focus-visible {
+  outline: 2px solid var(--viora-focus-ring);
+  outline-offset: 1px;
+}
+
+.viora-tag__remove svg {
+  width: 10px;
+  height: 10px;
+}
+
+.viora-tag--sm .viora-tag__remove {
+  width: 16px;
+  height: 16px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .viora-tag__remove {
+    transition: none;
+  }
+}

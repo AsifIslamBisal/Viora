@@ -23,5 +23,6 @@ export { Avatar } from "./components/Avatar/Avatar";
 export { Skeleton } from "./components/Skeleton/Skeleton";
 export { Divider } from "./components/Divider/Divider";
 export { List } from "./components/List/List";
+export { Tag } from "./components/Tag/Tag";
 
 export const VERSION = "0.1.0";
