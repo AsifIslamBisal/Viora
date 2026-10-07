@@ -13,5 +13,6 @@ export { Spinner } from "./components/Spinner/Spinner";
 export { RadioGroup } from "./components/Radio/RadioGroup";
 export { Radio } from "./components/Radio/Radio";
 export { Tabs } from "./components/Tabs/Tabs";
+export { Modal } from "./components/Modal/Modal";
 
 export const VERSION = "0.1.0";

@@ -1,0 +1,124 @@
+.viora-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--viora-spacing-lg);
+  background: rgba(16, 24, 40, 0.5);
+  font-family: var(--viora-font-family);
+  animation: viora-modal-overlay-in 150ms ease;
+}
+
+.viora-modal__dialog {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 460px;
+  max-height: calc(100vh - 64px);
+  overflow: auto;
+  padding: var(--viora-spacing-lg);
+  background: var(--viora-surface);
+  border: 1px solid var(--viora-border);
+  border-radius: var(--viora-radius-lg);
+  box-shadow: var(--viora-shadow-lg);
+  color: var(--viora-foreground);
+  animation: viora-modal-dialog-in 150ms ease;
+}
+
+.viora-modal__dialog:focus-visible {
+  outline: none;
+}
+
+.viora-modal__header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--viora-spacing-md);
+}
+
+.viora-modal__title {
+  margin: 0;
+  font-size: var(--viora-font-size-lg);
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+.viora-modal__description {
+  margin: var(--viora-spacing-xs) 0 0;
+  font-size: var(--viora-font-size-sm);
+  line-height: 1.6;
+  color: var(--viora-muted-foreground);
+}
+
+.viora-modal__close {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 28px;
+  height: 28px;
+  padding: 0;
+  color: var(--viora-muted-foreground);
+  background: transparent;
+  border: none;
+  border-radius: var(--viora-radius-sm);
+  cursor: pointer;
+  transition:
+    color var(--viora-transition-fast),
+    background-color var(--viora-transition-fast);
+}
+
+.viora-modal__close:hover {
+  color: var(--viora-foreground);
+  background: var(--viora-muted);
+}
+
+.viora-modal__close:focus-visible {
+  outline: 2px solid var(--viora-focus-ring);
+  outline-offset: 1px;
+}
+
+.viora-modal__close svg {
+  width: 16px;
+  height: 16px;
+}
+
+.viora-modal__content {
+  margin-top: var(--viora-spacing-md);
+  font-size: var(--viora-font-size-sm);
+  line-height: 1.6;
+}
+
+@keyframes viora-modal-overlay-in {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes viora-modal-dialog-in {
+  from {
+    opacity: 0;
+    transform: translateY(8px) scale(0.98);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .viora-modal,
+  .viora-modal__dialog {
+    animation: none;
+  }
+
+  .viora-modal__close {
+    transition: none;
+  }
+}
