@@ -26,5 +26,6 @@ export { List } from "./components/List/List";
 export { Tag } from "./components/Tag/Tag";
 export { Accordion } from "./components/Accordion/Accordion";
 export { Progress } from "./components/Progress/Progress";
+export { ToastProvider, useToast } from "./components/Toast/Toast";
 
 export const VERSION = "0.1.0";

@@ -74,4 +74,6 @@
 
   --viora-transition-fast: 120ms ease;
   --viora-transition-base: 200ms ease;
+
+  --viora-z-index-toast: 9999;
 }

@@ -1,0 +1,122 @@
+.viora-toast__viewport {
+  box-sizing: border-box;
+  position: fixed;
+  top: var(--viora-spacing-lg);
+  right: var(--viora-spacing-lg);
+  z-index: var(--viora-z-index-toast);
+  display: flex;
+  flex-direction: column;
+  gap: var(--viora-spacing-sm);
+  width: max-content;
+  max-width: min(360px, calc(100vw - 32px));
+  pointer-events: none;
+}
+
+.viora-toast {
+  box-sizing: border-box;
+  display: flex;
+  align-items: flex-start;
+  gap: var(--viora-spacing-sm);
+  padding: var(--viora-spacing-sm) var(--viora-spacing-md);
+  border: 1px solid var(--viora-border);
+  border-radius: var(--viora-radius-md);
+  background-color: var(--viora-surface);
+  box-shadow: var(--viora-shadow-md);
+  font-family: var(--viora-font-family);
+  color: var(--viora-foreground);
+  pointer-events: auto;
+  animation: viora-toast-enter var(--viora-transition-base);
+}
+
+.viora-toast--success {
+  background-color: var(--viora-success-soft);
+  border-color: var(--viora-success);
+}
+
+.viora-toast--danger {
+  background-color: var(--viora-danger-soft);
+  border-color: var(--viora-danger);
+}
+
+.viora-toast--warning {
+  background-color: var(--viora-warning-soft);
+  border-color: var(--viora-warning);
+}
+
+.viora-toast--info {
+  background-color: var(--viora-info-soft);
+  border-color: var(--viora-info);
+}
+
+.viora-toast__body {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.viora-toast__title {
+  font-size: var(--viora-font-size-sm);
+  font-weight: 600;
+}
+
+.viora-toast__description {
+  font-size: var(--viora-font-size-sm);
+  line-height: 1.5;
+  color: var(--viora-muted-foreground);
+}
+
+.viora-toast__close {
+  box-sizing: border-box;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: none;
+  width: 20px;
+  height: 20px;
+  margin: 0 0 0 auto;
+  padding: 0;
+  border: none;
+  border-radius: var(--viora-radius-sm);
+  background: transparent;
+  color: var(--viora-muted-foreground);
+  cursor: pointer;
+  transition: background-color var(--viora-transition-fast),
+    color var(--viora-transition-fast);
+}
+
+.viora-toast__close:hover {
+  background-color: color-mix(in srgb, currentColor 12%, transparent);
+  color: var(--viora-foreground);
+}
+
+.viora-toast__close:focus-visible {
+  outline: 2px solid var(--viora-focus-ring);
+  outline-offset: 1px;
+}
+
+.viora-toast__close svg {
+  width: 10px;
+  height: 10px;
+}
+
+@keyframes viora-toast-enter {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .viora-toast {
+    animation: none;
+  }
+
+  .viora-toast__close {
+    transition: none;
+  }
+}
