@@ -1,0 +1,148 @@
+.viora-button {
+  box-sizing: border-box;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--viora-spacing-sm);
+  margin: 0;
+  font-family: var(--viora-font-family);
+  font-weight: 500;
+  line-height: 1;
+  color: var(--viora-primary-foreground);
+  background: var(--viora-primary);
+  border: 1px solid transparent;
+  border-radius: var(--viora-radius-md);
+  cursor: pointer;
+  user-select: none;
+  white-space: nowrap;
+  text-decoration: none;
+  transition:
+    background-color var(--viora-transition-fast),
+    border-color var(--viora-transition-fast),
+    color var(--viora-transition-fast),
+    box-shadow var(--viora-transition-fast);
+}
+
+.viora-button:focus-visible {
+  outline: 2px solid var(--viora-focus-ring);
+  outline-offset: 2px;
+}
+
+.viora-button:disabled {
+  cursor: not-allowed;
+}
+
+.viora-button:disabled:not([aria-busy="true"]) {
+  opacity: 0.55;
+}
+
+.viora-button__spinner {
+  box-sizing: border-box;
+  flex-shrink: 0;
+  width: 1em;
+  height: 1em;
+  border: 2px solid currentColor;
+  border-right-color: transparent;
+  border-radius: var(--viora-radius-full);
+  animation: viora-button-spin 600ms linear infinite;
+}
+
+@keyframes viora-button-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.viora-button--primary {
+  background: var(--viora-primary);
+  color: var(--viora-primary-foreground);
+}
+
+.viora-button--primary:not(:disabled):hover {
+  background: var(--viora-primary-hover);
+}
+
+.viora-button--primary:not(:disabled):active {
+  background: var(--viora-primary-active);
+}
+
+.viora-button--secondary {
+  background: var(--viora-secondary);
+  color: var(--viora-secondary-foreground);
+}
+
+.viora-button--secondary:not(:disabled):hover {
+  background: var(--viora-secondary-hover);
+}
+
+.viora-button--secondary:not(:disabled):active {
+  background: var(--viora-secondary-active);
+}
+
+.viora-button--outline {
+  background: transparent;
+  color: var(--viora-foreground);
+  border-color: var(--viora-border-strong);
+}
+
+.viora-button--outline:not(:disabled):hover {
+  background: var(--viora-muted);
+}
+
+.viora-button--outline:not(:disabled):active {
+  background: var(--viora-secondary);
+}
+
+.viora-button--ghost {
+  background: transparent;
+  color: var(--viora-foreground);
+}
+
+.viora-button--ghost:not(:disabled):hover {
+  background: var(--viora-ghost-hover);
+}
+
+.viora-button--ghost:not(:disabled):active {
+  background: var(--viora-ghost-active);
+}
+
+.viora-button--danger {
+  background: var(--viora-danger);
+  color: var(--viora-danger-foreground);
+}
+
+.viora-button--danger:not(:disabled):hover {
+  background: var(--viora-danger-hover);
+}
+
+.viora-button--danger:not(:disabled):active {
+  background: var(--viora-danger-active);
+}
+
+.viora-button--sm {
+  height: 32px;
+  padding: 0 calc(var(--viora-spacing-sm) + var(--viora-spacing-xs));
+  font-size: var(--viora-font-size-xs);
+}
+
+.viora-button--md {
+  height: 40px;
+  padding: 0 var(--viora-spacing-md);
+  font-size: var(--viora-font-size-sm);
+}
+
+.viora-button--lg {
+  height: 48px;
+  padding: 0 var(--viora-spacing-lg);
+  font-size: var(--viora-font-size-md);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .viora-button {
+    transition: none;
+  }
+
+  .viora-button__spinner {
+    animation-duration: 1200ms;
+  }
+}
