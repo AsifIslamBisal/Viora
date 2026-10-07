@@ -1,0 +1,98 @@
+@import "../../styles/fields.css";
+
+.viora-checkbox {
+  display: inline-flex;
+  align-items: flex-start;
+  gap: var(--viora-spacing-sm);
+  font-family: var(--viora-font-family);
+  cursor: pointer;
+}
+
+.viora-checkbox__input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.viora-checkbox__box {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 16px;
+  height: 16px;
+  margin-top: 1px;
+  color: var(--viora-primary-foreground);
+  background: var(--viora-surface);
+  border: 1px solid var(--viora-border-strong);
+  border-radius: var(--viora-radius-sm);
+  transition:
+    background-color var(--viora-transition-fast),
+    border-color var(--viora-transition-fast);
+}
+
+.viora-checkbox__check,
+.viora-checkbox__dash {
+  display: none;
+  width: 12px;
+  height: 12px;
+}
+
+.viora-checkbox__input:checked + .viora-checkbox__box,
+.viora-checkbox__input:indeterminate + .viora-checkbox__box {
+  background: var(--viora-primary);
+  border-color: var(--viora-primary);
+}
+
+.viora-checkbox__input:checked + .viora-checkbox__box .viora-checkbox__check {
+  display: block;
+}
+
+.viora-checkbox__input:indeterminate
+  + .viora-checkbox__box
+  .viora-checkbox__dash {
+  display: block;
+}
+
+.viora-checkbox__input:not(:disabled):hover + .viora-checkbox__box {
+  border-color: var(--viora-border-hover);
+}
+
+.viora-checkbox__input:focus-visible + .viora-checkbox__box {
+  outline: 2px solid var(--viora-focus-ring);
+  outline-offset: 2px;
+}
+
+.viora-checkbox__input:disabled ~ .viora-checkbox__box {
+  background: var(--viora-muted);
+  border-color: var(--viora-border);
+  color: var(--viora-muted-foreground);
+  cursor: not-allowed;
+}
+
+.viora-checkbox__input:disabled ~ .viora-checkbox__label {
+  color: var(--viora-muted-foreground);
+  cursor: not-allowed;
+}
+
+.viora-checkbox__label {
+  font-size: var(--viora-font-size-sm);
+  line-height: 1.4;
+  color: var(--viora-foreground);
+}
+
+.viora-checkbox--error .viora-checkbox__box {
+  border-color: var(--viora-danger);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .viora-checkbox__box {
+    transition: none;
+  }
+}
