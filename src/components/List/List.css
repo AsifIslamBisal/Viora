@@ -1,0 +1,38 @@
+.viora-list {
+  box-sizing: border-box;
+  margin: 0;
+  padding-left: var(--viora-spacing-lg);
+  font-family: var(--viora-font-family);
+  font-size: var(--viora-font-size-md);
+  line-height: 1.6;
+  color: var(--viora-foreground);
+}
+
+.viora-list__item::marker {
+  color: var(--viora-muted-foreground);
+}
+
+.viora-list--ordered {
+  padding-left: var(--viora-spacing-lg);
+}
+
+.viora-list--plain {
+  list-style: none;
+  padding-left: 0;
+}
+
+.viora-list--plain .viora-list__item::marker {
+  content: none;
+}
+
+.viora-list--spacing-sm .viora-list__item + .viora-list__item {
+  margin-top: var(--viora-spacing-sm);
+}
+
+.viora-list--spacing-md .viora-list__item + .viora-list__item {
+  margin-top: var(--viora-spacing-md);
+}
+
+.viora-list--spacing-lg .viora-list__item + .viora-list__item {
+  margin-top: var(--viora-spacing-lg);
+}
