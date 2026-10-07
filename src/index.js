@@ -29,5 +29,6 @@ export { Progress } from "./components/Progress/Progress";
 export { ToastProvider, useToast } from "./components/Toast/Toast";
 export { Menu } from "./components/Menu/Menu";
 export { Label } from "./components/Label/Label";
+export { Fieldset } from "./components/Fieldset/Fieldset";
 
 export const VERSION = "0.1.0";

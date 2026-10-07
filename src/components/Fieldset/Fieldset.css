@@ -1,0 +1,40 @@
+.viora-fieldset {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  padding: var(--viora-spacing-lg);
+  border: 1px solid var(--viora-border);
+  border-radius: var(--viora-radius-md);
+  font-family: var(--viora-font-family);
+}
+
+.viora-fieldset--gap-sm {
+  display: flex;
+  flex-direction: column;
+  gap: var(--viora-spacing-sm);
+}
+
+.viora-fieldset--gap-md {
+  display: flex;
+  flex-direction: column;
+  gap: var(--viora-spacing-md);
+}
+
+.viora-fieldset--gap-lg {
+  display: flex;
+  flex-direction: column;
+  gap: var(--viora-spacing-lg);
+}
+
+.viora-fieldset__legend {
+  box-sizing: border-box;
+  padding: 0 var(--viora-spacing-sm);
+  font-size: var(--viora-font-size-sm);
+  font-weight: 600;
+  line-height: 1.4;
+  color: var(--viora-foreground);
+}
+
+.viora-fieldset--disabled {
+  opacity: 0.6;
+}
