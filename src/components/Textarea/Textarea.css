@@ -1,69 +1,69 @@
 @import "../../styles/fields.css";
 
-.viora-input {
+.viora-textarea {
   box-sizing: border-box;
   width: 100%;
+  min-height: 80px;
   font-family: inherit;
   font-weight: 400;
+  line-height: 1.5;
   color: var(--viora-foreground);
   background: var(--viora-surface);
   border: 1px solid var(--viora-border-strong);
   border-radius: var(--viora-radius-md);
+  resize: vertical;
   transition:
     border-color var(--viora-transition-fast),
     box-shadow var(--viora-transition-fast);
 }
 
-.viora-input::placeholder {
+.viora-textarea::placeholder {
   color: var(--viora-muted-foreground);
 }
 
-.viora-input:hover:not(:disabled):not(:focus) {
+.viora-textarea:hover:not(:disabled):not(:focus) {
   border-color: var(--viora-border-hover);
 }
 
-.viora-input:focus {
+.viora-textarea:focus {
   border-color: var(--viora-focus-ring);
   box-shadow: 0 0 0 3px var(--viora-focus-ring-soft);
   outline: none;
 }
 
-.viora-input--error {
+.viora-textarea--error {
   border-color: var(--viora-danger);
 }
 
-.viora-input--error:focus {
+.viora-textarea--error:focus {
   border-color: var(--viora-danger);
   box-shadow: 0 0 0 3px var(--viora-danger-ring-soft);
 }
 
-.viora-input:disabled {
+.viora-textarea:disabled {
   background: var(--viora-muted);
   color: var(--viora-muted-foreground);
   cursor: not-allowed;
   opacity: 0.75;
 }
 
-.viora-input--sm {
-  height: 32px;
-  padding: 0 calc(var(--viora-spacing-sm) + var(--viora-spacing-xs));
+.viora-textarea--sm {
+  padding: var(--viora-spacing-xs) calc(var(--viora-spacing-sm) + var(--viora-spacing-xs));
   font-size: var(--viora-font-size-xs);
 }
 
-.viora-input--md {
-  height: 40px;
-  padding: 0 var(--viora-spacing-md);
+.viora-textarea--md {
+  padding: var(--viora-spacing-sm) var(--viora-spacing-md);
   font-size: var(--viora-font-size-sm);
 }
 
-.viora-input--lg {
-  height: 48px;
-  padding: 0 var(--viora-spacing-lg);
+.viora-textarea--lg {
+  padding: var(--viora-spacing-md) var(--viora-spacing-lg);
   font-size: var(--viora-font-size-md);
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .viora-input {
+  .viora-textarea {
     transition: none;
   }
 }

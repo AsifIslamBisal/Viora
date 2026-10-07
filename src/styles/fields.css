@@ -1,0 +1,23 @@
+.viora-field {
+  box-sizing: border-box;
+  display: inline-flex;
+  flex-direction: column;
+  gap: var(--viora-spacing-xs);
+  font-family: var(--viora-font-family);
+}
+
+.viora-field__label {
+  font-size: var(--viora-font-size-sm);
+  font-weight: 500;
+  color: var(--viora-foreground);
+}
+
+.viora-field__message {
+  margin: 0;
+  font-size: var(--viora-font-size-xs);
+  color: var(--viora-muted-foreground);
+}
+
+.viora-field__message--error {
+  color: var(--viora-danger-soft-foreground);
+}
