@@ -10,5 +10,7 @@ export { Select } from "./components/Select/Select";
 export { Switch } from "./components/Switch/Switch";
 export { Alert } from "./components/Alert/Alert";
 export { Spinner } from "./components/Spinner/Spinner";
+export { RadioGroup } from "./components/Radio/RadioGroup";
+export { Radio } from "./components/Radio/Radio";
 
 export const VERSION = "0.1.0";
