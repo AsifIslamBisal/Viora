@@ -1,0 +1,57 @@
+.viora-tabs {
+  box-sizing: border-box;
+  font-family: var(--viora-font-family);
+  color: var(--viora-foreground);
+}
+
+.viora-tabs__list {
+  display: flex;
+  gap: var(--viora-spacing-xs);
+  border-bottom: 1px solid var(--viora-border);
+}
+
+.viora-tabs__tab {
+  box-sizing: border-box;
+  appearance: none;
+  -webkit-appearance: none;
+  margin: 0;
+  padding: var(--viora-spacing-sm) var(--viora-spacing-md);
+  font-family: inherit;
+  font-size: var(--viora-font-size-sm);
+  font-weight: 500;
+  line-height: 1.4;
+  color: var(--viora-muted-foreground);
+  background: transparent;
+  border: 1px solid transparent;
+  border-bottom-width: 2px;
+  cursor: pointer;
+  transition:
+    color var(--viora-transition-fast),
+    border-color var(--viora-transition-fast);
+}
+
+.viora-tabs__tab:hover {
+  color: var(--viora-foreground);
+}
+
+.viora-tabs__tab--active {
+  color: var(--viora-primary);
+  border-bottom-color: var(--viora-primary);
+}
+
+.viora-tabs__tab:focus-visible {
+  outline: 2px solid var(--viora-focus-ring);
+  outline-offset: -2px;
+}
+
+.viora-tabs__panel {
+  padding-top: var(--viora-spacing-md);
+  font-size: var(--viora-font-size-sm);
+  line-height: 1.6;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .viora-tabs__tab {
+    transition: none;
+  }
+}
