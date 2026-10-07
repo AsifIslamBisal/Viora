@@ -20,5 +20,6 @@ export { Heading } from "./components/Heading/Heading";
 export { Text } from "./components/Text/Text";
 export { Link } from "./components/Link/Link";
 export { Avatar } from "./components/Avatar/Avatar";
+export { Skeleton } from "./components/Skeleton/Skeleton";
 
 export const VERSION = "0.1.0";
