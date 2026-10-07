@@ -1,0 +1,98 @@
+@import "../../styles/fields.css";
+
+.viora-select-wrap {
+  position: relative;
+}
+
+.viora-select {
+  box-sizing: border-box;
+  width: 100%;
+  appearance: none;
+  -webkit-appearance: none;
+  font-family: inherit;
+  font-weight: 400;
+  color: var(--viora-foreground);
+  background: var(--viora-surface);
+  border: 1px solid var(--viora-border-strong);
+  border-radius: var(--viora-radius-md);
+  cursor: pointer;
+  transition:
+    border-color var(--viora-transition-fast),
+    box-shadow var(--viora-transition-fast);
+}
+
+.viora-select::-ms-expand {
+  display: none;
+}
+
+.viora-select__chevron {
+  position: absolute;
+  top: 50%;
+  right: 12px;
+  display: flex;
+  width: 16px;
+  height: 16px;
+  color: var(--viora-muted-foreground);
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+.viora-select__chevron svg {
+  width: 100%;
+  height: 100%;
+}
+
+.viora-select:hover:not(:disabled):not(:focus) {
+  border-color: var(--viora-border-hover);
+}
+
+.viora-select:focus {
+  border-color: var(--viora-focus-ring);
+  box-shadow: 0 0 0 3px var(--viora-focus-ring-soft);
+  outline: none;
+}
+
+.viora-select--error {
+  border-color: var(--viora-danger);
+}
+
+.viora-select--error:focus {
+  border-color: var(--viora-danger);
+  box-shadow: 0 0 0 3px var(--viora-danger-ring-soft);
+}
+
+.viora-select:disabled {
+  background: var(--viora-muted);
+  color: var(--viora-muted-foreground);
+  cursor: not-allowed;
+  opacity: 0.75;
+}
+
+.viora-select:disabled ~ .viora-select__chevron {
+  color: var(--viora-border-strong);
+}
+
+.viora-select--sm {
+  height: 32px;
+  padding: 0 calc(var(--viora-spacing-sm) + var(--viora-spacing-xs)) 0
+    calc(var(--viora-spacing-sm) + var(--viora-spacing-xs));
+  font-size: var(--viora-font-size-xs);
+}
+
+.viora-select--md {
+  height: 40px;
+  padding: 0 var(--viora-spacing-md);
+  font-size: var(--viora-font-size-sm);
+}
+
+.viora-select--lg {
+  height: 48px;
+  padding: 0 var(--viora-spacing-lg);
+  font-size: var(--viora-font-size-md);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .viora-select {
+    transition: none;
+  }
+}
