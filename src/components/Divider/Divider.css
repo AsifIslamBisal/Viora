@@ -1,0 +1,41 @@
+.viora-divider {
+  box-sizing: border-box;
+  width: 100%;
+  background-color: var(--viora-border);
+}
+
+.viora-divider[role="separator"][aria-orientation="horizontal"] {
+  height: 1px;
+}
+
+.viora-divider--vertical {
+  width: 1px;
+  height: auto;
+  align-self: stretch;
+}
+
+.viora-divider--vertical[role="separator"][aria-orientation="vertical"] {
+  width: 1px;
+}
+
+.viora-divider--with-label {
+  display: flex;
+  align-items: center;
+  gap: var(--viora-spacing-md);
+  background-color: transparent;
+}
+
+.viora-divider__line {
+  flex: 1;
+  height: 1px;
+  background-color: var(--viora-border);
+}
+
+.viora-divider__label {
+  flex: none;
+  font-family: var(--viora-font-family);
+  font-size: var(--viora-font-size-sm);
+  font-weight: 500;
+  color: var(--viora-muted-foreground);
+  white-space: nowrap;
+}
