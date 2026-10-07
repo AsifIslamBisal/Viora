@@ -1,0 +1,25 @@
+.viora-label {
+  box-sizing: border-box;
+  display: inline-block;
+  font-family: var(--viora-font-family);
+  font-size: var(--viora-font-size-md);
+  font-weight: 500;
+  line-height: 1.4;
+  color: var(--viora-foreground);
+}
+
+.viora-label--sm {
+  font-size: var(--viora-font-size-sm);
+}
+
+.viora-label--lg {
+  font-size: var(--viora-font-size-lg);
+}
+
+.viora-label--muted {
+  color: var(--viora-muted-foreground);
+}
+
+.viora-label--error {
+  color: var(--viora-danger);
+}
