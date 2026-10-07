@@ -31,5 +31,6 @@ export { Menu } from "./components/Menu/Menu";
 export { Label } from "./components/Label/Label";
 export { Fieldset } from "./components/Fieldset/Fieldset";
 export { Table } from "./components/Table/Table";
+export { Pagination } from "./components/Pagination/Pagination";
 
 export const VERSION = "0.1.0";
