@@ -15,5 +15,6 @@ export { Radio } from "./components/Radio/Radio";
 export { Tabs } from "./components/Tabs/Tabs";
 export { Modal } from "./components/Modal/Modal";
 export { Tooltip } from "./components/Tooltip/Tooltip";
+export { Breadcrumb } from "./components/Breadcrumb/Breadcrumb";
 
 export const VERSION = "0.1.0";
