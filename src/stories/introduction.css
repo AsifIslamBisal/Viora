@@ -1,0 +1,109 @@
+.viora-intro {
+  width: 720px;
+  max-width: calc(100vw - 48px);
+  padding: var(--viora-spacing-xl);
+  background: var(--viora-surface);
+  border: 1px solid var(--viora-border);
+  border-radius: var(--viora-radius-lg);
+  box-shadow: var(--viora-shadow-md);
+  font-family: var(--viora-font-family);
+  color: var(--viora-foreground);
+}
+
+.viora-intro__header {
+  display: flex;
+  align-items: center;
+  gap: var(--viora-spacing-md);
+}
+
+.viora-intro__logo {
+  display: grid;
+  place-items: center;
+  width: 48px;
+  height: 48px;
+  flex-shrink: 0;
+  border-radius: var(--viora-radius-md);
+  background: var(--viora-primary);
+  color: var(--viora-primary-foreground);
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.viora-intro__title {
+  margin: 0;
+  font-size: var(--viora-font-size-lg);
+  font-weight: 600;
+}
+
+.viora-intro__tagline {
+  margin: 4px 0 0;
+  color: var(--viora-muted-foreground);
+  font-size: var(--viora-font-size-sm);
+  line-height: 1.6;
+}
+
+.viora-intro__snippet {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--viora-spacing-md);
+  margin-top: var(--viora-spacing-lg);
+  padding: var(--viora-spacing-sm) var(--viora-spacing-md);
+  background: var(--viora-muted);
+  border: 1px solid var(--viora-border);
+  border-radius: var(--viora-radius-md);
+}
+
+.viora-intro__snippet code {
+  font-size: var(--viora-font-size-xs);
+  color: var(--viora-foreground);
+}
+
+.viora-intro__snippet span {
+  color: var(--viora-muted-foreground);
+  font-size: var(--viora-font-size-xs);
+}
+
+.viora-intro__section {
+  margin-top: var(--viora-spacing-lg);
+}
+
+.viora-intro__label {
+  margin: 0 0 var(--viora-spacing-sm);
+  color: var(--viora-muted-foreground);
+  font-size: var(--viora-font-size-xs);
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.viora-intro__swatches {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--viora-spacing-sm);
+}
+
+.viora-intro__swatch {
+  display: flex;
+  align-items: center;
+  gap: var(--viora-spacing-sm);
+  padding: var(--viora-spacing-xs) var(--viora-spacing-sm);
+  background: var(--viora-background);
+  border: 1px solid var(--viora-border);
+  border-radius: var(--viora-radius-full);
+  font-size: var(--viora-font-size-xs);
+  color: var(--viora-secondary-foreground);
+}
+
+.viora-intro__chip {
+  width: 14px;
+  height: 14px;
+  border-radius: var(--viora-radius-full);
+  border: 1px solid rgba(16, 24, 40, 0.1);
+}
+
+.viora-intro__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--viora-spacing-sm);
+}
