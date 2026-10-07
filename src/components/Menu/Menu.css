@@ -1,0 +1,104 @@
+.viora-menu {
+  box-sizing: border-box;
+  position: relative;
+  display: inline-block;
+  font-family: var(--viora-font-family);
+}
+
+.viora-menu__panel {
+  position: absolute;
+  top: calc(100% + 6px);
+  left: 0;
+  z-index: var(--viora-z-index-popover);
+  min-width: 180px;
+  padding: var(--viora-spacing-sm);
+  border: 1px solid var(--viora-border);
+  border-radius: var(--viora-radius-md);
+  background-color: var(--viora-surface);
+  box-shadow: var(--viora-shadow-lg);
+  animation: viora-menu-enter var(--viora-transition-fast);
+}
+
+.viora-menu--align-end .viora-menu__panel {
+  left: auto;
+  right: 0;
+}
+
+.viora-menu__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.viora-menu__row:not(:last-child) {
+  margin-bottom: 2px;
+}
+
+.viora-menu__item {
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 8px 12px;
+  border: none;
+  border-radius: var(--viora-radius-sm);
+  background: transparent;
+  font-family: var(--viora-font-family);
+  font-size: var(--viora-font-size-sm);
+  line-height: 1.4;
+  color: var(--viora-foreground);
+  text-align: left;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color var(--viora-transition-fast),
+    color var(--viora-transition-fast);
+}
+
+.viora-menu__item:hover,
+.viora-menu__item:focus-visible {
+  background-color: var(--viora-secondary-hover);
+  outline: none;
+}
+
+.viora-menu__item--danger {
+  color: var(--viora-danger);
+}
+
+.viora-menu__item--danger:hover,
+.viora-menu__item--danger:focus-visible {
+  background-color: var(--viora-danger-soft);
+}
+
+.viora-menu__item--disabled {
+  color: var(--viora-muted-foreground);
+  opacity: 0.55;
+  cursor: default;
+  pointer-events: none;
+}
+
+.viora-menu__separator {
+  display: block;
+  height: 1px;
+  margin: var(--viora-spacing-sm) 0;
+  background-color: var(--viora-border);
+}
+
+@keyframes viora-menu-enter {
+  from {
+    opacity: 0;
+    transform: translateY(-4px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .viora-menu__panel,
+  .viora-menu__item {
+    animation: none;
+    transition: none;
+  }
+}
