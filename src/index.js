@@ -18,5 +18,6 @@ export { Tooltip } from "./components/Tooltip/Tooltip";
 export { Breadcrumb } from "./components/Breadcrumb/Breadcrumb";
 export { Heading } from "./components/Heading/Heading";
 export { Text } from "./components/Text/Text";
+export { Link } from "./components/Link/Link";
 
 export const VERSION = "0.1.0";

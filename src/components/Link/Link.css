@@ -1,0 +1,53 @@
+.viora-link {
+  box-sizing: border-box;
+  font-family: var(--viora-font-family);
+  color: var(--viora-primary);
+  text-decoration: none;
+  cursor: pointer;
+  border-radius: var(--viora-radius-xs);
+  transition: color var(--viora-transition-fast),
+    text-decoration-color var(--viora-transition-fast);
+}
+
+.viora-link:hover {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.viora-link:focus-visible {
+  outline: 2px solid var(--viora-focus-ring);
+  outline-offset: 2px;
+}
+
+.viora-link--primary {
+  color: var(--viora-primary);
+  font-weight: 500;
+}
+
+.viora-link--muted {
+  color: var(--viora-muted-foreground);
+}
+
+.viora-link--muted:hover {
+  color: var(--viora-foreground);
+}
+
+.viora-link--danger {
+  color: var(--viora-danger);
+}
+
+.viora-link--underline-always {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.viora-link--underline-none,
+.viora-link--underline-none:hover {
+  text-decoration: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .viora-link {
+    transition: none;
+  }
+}
