@@ -4,10 +4,72 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Viora</title>
+    <link rel="stylesheet" href="/src/styles/index.css" />
+    <style>
+      body {
+        margin: 0;
+        min-height: 100vh;
+        display: grid;
+        place-items: center;
+        padding: var(--viora-spacing-lg);
+        background: var(--viora-muted);
+        color: var(--viora-foreground);
+        font-family: var(--viora-font-family);
+      }
+
+      .placeholder-card {
+        max-width: 440px;
+        padding: var(--viora-spacing-xl);
+        background: var(--viora-surface);
+        border: 1px solid var(--viora-border);
+        border-radius: var(--viora-radius-lg);
+        box-shadow: var(--viora-shadow-md);
+        text-align: center;
+      }
+
+      .placeholder-logo {
+        display: inline-grid;
+        place-items: center;
+        width: 48px;
+        height: 48px;
+        border-radius: var(--viora-radius-md);
+        background: var(--viora-primary);
+        color: var(--viora-primary-foreground);
+        font-size: 1.25rem;
+        font-weight: 700;
+      }
+
+      .placeholder-card h1 {
+        margin: var(--viora-spacing-md) 0 var(--viora-spacing-xs);
+        font-size: var(--viora-font-size-lg);
+      }
+
+      .placeholder-card p {
+        margin: 0;
+        color: var(--viora-muted-foreground);
+        font-size: var(--viora-font-size-sm);
+        line-height: 1.6;
+      }
+
+      .placeholder-card code {
+        padding: 2px 6px;
+        border-radius: var(--viora-radius-sm);
+        background: var(--viora-muted);
+        border: 1px solid var(--viora-border);
+        font-size: var(--viora-font-size-xs);
+      }
+    </style>
   </head>
   <body>
-    <div id="root"></div>
-    <p>Viora is a React component library. Open Storybook (<code>npm run dev</code>) to browse components.</p>
+    <main class="placeholder-card">
+      <span class="placeholder-logo" aria-hidden="true">V</span>
+      <h1>Viora</h1>
+      <p>
+        A modern, accessible React component library. This page is a dev
+        placeholder — run <code>npm run dev</code> to browse components in
+        Storybook.
+      </p>
+    </main>
     <script type="module" src="/src/index.js"></script>
   </body>
 </html>

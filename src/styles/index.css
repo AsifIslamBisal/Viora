@@ -1,11 +1,5 @@
 @import "./tokens.css";
 
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-
 .viora-sr-only {
   position: absolute;
   width: 1px;
