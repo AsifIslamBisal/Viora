@@ -1,0 +1,60 @@
+.viora-tooltip {
+  position: relative;
+  display: inline-flex;
+  font-family: var(--viora-font-family);
+}
+
+.viora-tooltip__content {
+  box-sizing: border-box;
+  padding: var(--viora-spacing-xs) var(--viora-spacing-sm);
+  border-radius: var(--viora-radius-sm);
+  background: var(--viora-foreground);
+  color: var(--viora-background);
+  font-size: var(--viora-font-size-xs);
+  line-height: 1.4;
+  white-space: nowrap;
+  visibility: hidden;
+  opacity: 0;
+  transition:
+    opacity var(--viora-transition-fast),
+    visibility var(--viora-transition-fast);
+}
+
+.viora-tooltip--open .viora-tooltip__content {
+  visibility: visible;
+  opacity: 1;
+}
+
+.viora-tooltip--top .viora-tooltip__content {
+  position: absolute;
+  bottom: calc(100% + 6px);
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.viora-tooltip--bottom .viora-tooltip__content {
+  position: absolute;
+  top: calc(100% + 6px);
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.viora-tooltip--right .viora-tooltip__content {
+  position: absolute;
+  left: calc(100% + 6px);
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.viora-tooltip--left .viora-tooltip__content {
+  position: absolute;
+  right: calc(100% + 6px);
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .viora-tooltip__content {
+    transition: none;
+  }
+}
