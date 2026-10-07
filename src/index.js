@@ -30,5 +30,6 @@ export { ToastProvider, useToast } from "./components/Toast/Toast";
 export { Menu } from "./components/Menu/Menu";
 export { Label } from "./components/Label/Label";
 export { Fieldset } from "./components/Fieldset/Fieldset";
+export { Table } from "./components/Table/Table";
 
 export const VERSION = "0.1.0";

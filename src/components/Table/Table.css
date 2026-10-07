@@ -1,0 +1,114 @@
+.viora-table {
+  box-sizing: border-box;
+  width: 100%;
+  border-collapse: collapse;
+  font-family: var(--viora-font-family);
+  font-size: var(--viora-font-size-sm);
+  color: var(--viora-foreground);
+}
+
+.viora-table__caption {
+  padding: 0;
+  font-size: var(--viora-font-size-sm);
+  font-weight: 600;
+  color: var(--viora-muted-foreground);
+  text-align: left;
+  margin-bottom: var(--viora-spacing-sm);
+}
+
+.viora-table__th {
+  padding: 10px 12px;
+  border-bottom: 1px solid var(--viora-border);
+  background-color: var(--viora-muted);
+  font-size: var(--viora-font-size-xs);
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: var(--viora-muted-foreground);
+  text-align: left;
+  white-space: nowrap;
+}
+
+.viora-table--align-center {
+  text-align: center;
+}
+
+.viora-table--align-right {
+  text-align: right;
+}
+
+.viora-table__sort {
+  box-sizing: border-box;
+  display: inline-flex;
+  align-items: center;
+  gap: var(--viora-spacing-xs);
+  padding: 0;
+  border: none;
+  background: transparent;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  letter-spacing: inherit;
+  text-transform: inherit;
+  color: inherit;
+  cursor: pointer;
+}
+
+.viora-table__sort:hover {
+  color: var(--viora-foreground);
+}
+
+.viora-table__sort:focus-visible {
+  outline: 2px solid var(--viora-focus-ring);
+  outline-offset: 2px;
+  border-radius: var(--viora-radius-sm);
+}
+
+.viora-table__sort-indicator {
+  display: inline-flex;
+  color: var(--viora-border-strong);
+  transition: transform var(--viora-transition-fast),
+    color var(--viora-transition-fast);
+}
+
+.viora-table__sort-indicator svg {
+  width: 12px;
+  height: 12px;
+}
+
+.viora-table__sort-indicator--asc {
+  transform: rotate(180deg);
+  color: var(--viora-primary);
+}
+
+.viora-table__sort-indicator--desc {
+  color: var(--viora-primary);
+}
+
+.viora-table__td {
+  padding: 12px;
+  border-bottom: 1px solid var(--viora-border);
+  text-align: left;
+  line-height: 1.5;
+}
+
+.viora-table__tbody tr:last-child .viora-table__td {
+  border-bottom: none;
+}
+
+.viora-table--striped .viora-table__tbody tr:nth-child(even) {
+  background-color: var(--viora-muted);
+}
+
+.viora-table__empty {
+  padding: var(--viora-spacing-lg) var(--viora-spacing-md);
+  text-align: center;
+  color: var(--viora-muted-foreground);
+  border-bottom: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .viora-table__sort-indicator {
+    transition: none;
+  }
+}
