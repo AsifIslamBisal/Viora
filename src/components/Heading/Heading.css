@@ -1,0 +1,33 @@
+.viora-heading {
+  box-sizing: border-box;
+  margin: 0;
+  font-family: var(--viora-font-family);
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--viora-foreground);
+}
+
+.viora-heading--1 {
+  font-size: var(--viora-font-size-3xl);
+}
+
+.viora-heading--2 {
+  font-size: var(--viora-font-size-2xl);
+}
+
+.viora-heading--3 {
+  font-size: var(--viora-font-size-xl);
+}
+
+.viora-heading--4 {
+  font-size: var(--viora-font-size-lg);
+}
+
+.viora-heading--5 {
+  font-size: var(--viora-font-size-md);
+}
+
+.viora-heading--6 {
+  font-size: var(--viora-font-size-sm);
+  font-weight: 600;
+}

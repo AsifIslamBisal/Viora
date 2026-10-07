@@ -16,5 +16,7 @@ export { Tabs } from "./components/Tabs/Tabs";
 export { Modal } from "./components/Modal/Modal";
 export { Tooltip } from "./components/Tooltip/Tooltip";
 export { Breadcrumb } from "./components/Breadcrumb/Breadcrumb";
+export { Heading } from "./components/Heading/Heading";
+export { Text } from "./components/Text/Text";
 
 export const VERSION = "0.1.0";
