@@ -6,6 +6,7 @@
   --viora-primary-active: #3730a3;
   --viora-primary-foreground: #ffffff;
   --viora-primary-soft: #eef2ff;
+  --viora-primary-soft-foreground: #3730a3;
 
   --viora-secondary: #f2f4f7;
   --viora-secondary-hover: #e4e7ec;
@@ -20,13 +21,17 @@
   --viora-danger-active: #912018;
   --viora-danger-foreground: #ffffff;
   --viora-danger-soft: #fef3f2;
+  --viora-danger-soft-foreground: #912018;
 
   --viora-success: #17b26a;
   --viora-success-soft: #ecfdf3;
+  --viora-success-soft-foreground: #067647;
   --viora-warning: #f79009;
   --viora-warning-soft: #fffaeb;
+  --viora-warning-soft-foreground: #b54708;
   --viora-info: #2e90fa;
   --viora-info-soft: #eff8ff;
+  --viora-info-soft-foreground: #175cd3;
 
   --viora-background: #ffffff;
   --viora-surface: #ffffff;

@@ -1,0 +1,59 @@
+.viora-badge {
+  box-sizing: border-box;
+  display: inline-flex;
+  align-items: center;
+  gap: var(--viora-spacing-xs);
+  border-radius: var(--viora-radius-full);
+  font-family: var(--viora-font-family);
+  font-weight: 500;
+  line-height: 1.2;
+  white-space: nowrap;
+}
+
+.viora-badge__dot {
+  flex-shrink: 0;
+  width: 6px;
+  height: 6px;
+  border-radius: var(--viora-radius-full);
+  background: currentColor;
+}
+
+.viora-badge--secondary {
+  background: var(--viora-secondary);
+  color: var(--viora-secondary-foreground);
+}
+
+.viora-badge--primary {
+  background: var(--viora-primary-soft);
+  color: var(--viora-primary-soft-foreground);
+}
+
+.viora-badge--success {
+  background: var(--viora-success-soft);
+  color: var(--viora-success-soft-foreground);
+}
+
+.viora-badge--warning {
+  background: var(--viora-warning-soft);
+  color: var(--viora-warning-soft-foreground);
+}
+
+.viora-badge--danger {
+  background: var(--viora-danger-soft);
+  color: var(--viora-danger-soft-foreground);
+}
+
+.viora-badge--info {
+  background: var(--viora-info-soft);
+  color: var(--viora-info-soft-foreground);
+}
+
+.viora-badge--sm {
+  padding: 0 var(--viora-spacing-sm);
+  font-size: var(--viora-font-size-xs);
+}
+
+.viora-badge--md {
+  padding: var(--viora-spacing-xs) var(--viora-spacing-md);
+  font-size: var(--viora-font-size-sm);
+}
