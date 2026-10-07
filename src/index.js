@@ -9,5 +9,6 @@ export { Checkbox } from "./components/Checkbox/Checkbox";
 export { Select } from "./components/Select/Select";
 export { Switch } from "./components/Switch/Switch";
 export { Alert } from "./components/Alert/Alert";
+export { Spinner } from "./components/Spinner/Spinner";
 
 export const VERSION = "0.1.0";
