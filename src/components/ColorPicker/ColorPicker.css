@@ -1,0 +1,119 @@
+@import "../../styles/fields.css";
+
+.viora-color-picker {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: var(--viora-spacing-xs);
+  font-family: var(--viora-font-family);
+  position: relative;
+}
+
+.viora-color-picker__trigger {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  width: fit-content;
+  padding: 6px 12px 6px 6px;
+  border: 1px solid var(--viora-border);
+  border-radius: var(--viora-radius-md);
+  background-color: var(--viora-surface);
+  color: var(--viora-foreground);
+  font-family: inherit;
+  font-size: var(--viora-font-size-sm);
+  cursor: pointer;
+  transition: border-color var(--viora-transition-fast);
+}
+
+.viora-color-picker__trigger:hover:not(:disabled) {
+  border-color: var(--viora-primary);
+}
+
+.viora-color-picker__trigger:disabled {
+  cursor: default;
+  opacity: 0.5;
+}
+
+.viora-color-picker__trigger:focus-visible {
+  outline: 2px solid var(--viora-focus-ring);
+  outline-offset: 2px;
+}
+
+.viora-color-picker__swatch {
+  width: 22px;
+  height: 22px;
+  border: 1px solid rgb(0 0 0 / 0.15);
+  border-radius: var(--viora-radius-sm);
+}
+
+.viora-color-picker__value {
+  font-variant-numeric: tabular-nums;
+}
+
+.viora-color-picker__popover {
+  position: absolute;
+  top: calc(100% + 6px);
+  left: 0;
+  z-index: 50;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 216px;
+  padding: 12px;
+  border: 1px solid var(--viora-border);
+  border-radius: var(--viora-radius-lg);
+  background-color: var(--viora-surface);
+  box-shadow: 0 12px 32px rgb(0 0 0 / 0.15);
+}
+
+.viora-color-picker__grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 6px;
+}
+
+.viora-color-picker__preset {
+  width: 24px;
+  height: 24px;
+  padding: 0;
+  border: 1px solid rgb(0 0 0 / 0.15);
+  border-radius: var(--viora-radius-sm);
+  cursor: pointer;
+}
+
+.viora-color-picker__preset[aria-pressed="true"] {
+  outline: 2px solid var(--viora-primary);
+  outline-offset: 1px;
+}
+
+.viora-color-picker__preset:focus-visible {
+  outline: 2px solid var(--viora-focus-ring);
+  outline-offset: 1px;
+}
+
+.viora-color-picker__custom {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.viora-color-picker__native {
+  width: 28px;
+  height: 28px;
+  padding: 0;
+  border: 1px solid var(--viora-border);
+  border-radius: var(--viora-radius-sm);
+  background: none;
+  cursor: pointer;
+}
+
+.viora-color-picker__custom .viora-input {
+  flex: 1;
+  min-width: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .viora-color-picker__trigger {
+    transition: none;
+  }
+}
