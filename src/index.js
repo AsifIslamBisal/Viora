@@ -50,5 +50,6 @@ export { TimePicker } from "./components/TimePicker/TimePicker";
 export { DataGrid } from "./components/DataGrid/DataGrid";
 export { CommandPalette } from "./components/CommandPalette/CommandPalette";
 export { ColorPicker } from "./components/ColorPicker/ColorPicker";
+export { MultiSelect } from "./components/MultiSelect/MultiSelect";
 
 export const VERSION = "0.1.0";
