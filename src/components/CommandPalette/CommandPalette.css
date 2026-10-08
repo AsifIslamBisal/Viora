@@ -6,7 +6,7 @@
   align-items: flex-start;
   justify-content: center;
   padding: 16vh 16px 16px;
-  background-color: color-mix(in srgb, rgb(0 0 0) 45%, transparent);
+  background-color: var(--viora-overlay);
   font-family: var(--viora-font-family);
 }
 

@@ -1,63 +1,94 @@
 :root {
   color-scheme: light;
 
+  /* Accent (indigo) — full interaction states */
   --viora-primary: #4f46e5;
   --viora-primary-hover: #4338ca;
   --viora-primary-active: #3730a3;
   --viora-primary-foreground: #ffffff;
   --viora-primary-soft: #eef2ff;
+  --viora-primary-soft-hover: #e0e7ff;
   --viora-primary-soft-foreground: #3730a3;
 
-  --viora-secondary: #f2f4f7;
-  --viora-secondary-hover: #e4e7ec;
-  --viora-secondary-active: #d0d5dd;
-  --viora-secondary-foreground: #344054;
+  /* Secondary / ghost — neutral fills */
+  --viora-secondary: #eef0f6;
+  --viora-secondary-hover: #e3e6ef;
+  --viora-secondary-active: #cfd4e1;
+  --viora-secondary-foreground: #2f3542;
 
-  --viora-ghost-hover: #f2f4f7;
-  --viora-ghost-active: #e4e7ec;
+  --viora-ghost-hover: #f1f3f8;
+  --viora-ghost-active: #e2e6ef;
 
-  --viora-danger: #d92d20;
-  --viora-danger-hover: #b42318;
-  --viora-danger-active: #912018;
+  /* Status — danger */
+  --viora-danger: #dc2626;
+  --viora-danger-hover: #b91c1c;
+  --viora-danger-active: #991b1b;
   --viora-danger-foreground: #ffffff;
-  --viora-danger-soft: #fef3f2;
-  --viora-danger-soft-foreground: #912018;
+  --viora-danger-soft: #fef2f2;
+  --viora-danger-soft-hover: #fee2e2;
+  --viora-danger-soft-foreground: #991b1b;
 
-  --viora-success: #17b26a;
-  --viora-success-soft: #ecfdf3;
-  --viora-success-soft-foreground: #067647;
-  --viora-warning: #f79009;
-  --viora-warning-soft: #fffaeb;
-  --viora-warning-soft-foreground: #b54708;
-  --viora-info: #2e90fa;
-  --viora-info-soft: #eff8ff;
-  --viora-info-soft-foreground: #175cd3;
+  /* Status — success */
+  --viora-success: #16a34a;
+  --viora-success-hover: #15803d;
+  --viora-success-active: #166534;
+  --viora-success-foreground: #ffffff;
+  --viora-success-soft: #f0fdf4;
+  --viora-success-soft-hover: #dcfce7;
+  --viora-success-soft-foreground: #166534;
 
+  /* Status — warning */
+  --viora-warning: #d97706;
+  --viora-warning-hover: #b45309;
+  --viora-warning-active: #92400e;
+  --viora-warning-foreground: #ffffff;
+  --viora-warning-soft: #fffbeb;
+  --viora-warning-soft-hover: #fef3c7;
+  --viora-warning-soft-foreground: #92400e;
+
+  /* Status — info */
+  --viora-info: #0ea5e9;
+  --viora-info-hover: #0284c7;
+  --viora-info-active: #0369a1;
+  --viora-info-foreground: #ffffff;
+  --viora-info-soft: #f0f9ff;
+  --viora-info-soft-hover: #e0f2fe;
+  --viora-info-soft-foreground: #0369a1;
+
+  /* Neutrals — cool gray scale */
   --viora-background: #ffffff;
   --viora-surface: #ffffff;
-  --viora-foreground: #101828;
-  --viora-muted: #f9fafb;
-  --viora-muted-foreground: #667085;
-  --viora-border: #e4e7ec;
-  --viora-border-strong: #d0d5dd;
-  --viora-border-hover: #98a2b3;
-  --viora-skeleton-highlight: rgba(255, 255, 255, 0.8);
+  --viora-card: #ffffff;
+  --viora-foreground: #1a1d27;
+  --viora-muted: #f4f5f9;
+  --viora-muted-hover: #eceef4;
+  --viora-muted-foreground: #5c6472;
+  --viora-border: #e2e5ee;
+  --viora-border-strong: #c6ccd9;
+  --viora-border-hover: #97a0b3;
+  --viora-skeleton-highlight: rgba(255, 255, 255, 0.85);
+  --viora-overlay: rgba(17, 21, 33, 0.5);
 
+  /* Focus rings */
   --viora-focus-ring: #4f46e5;
   --viora-focus-ring-soft: rgba(79, 70, 229, 0.2);
-  --viora-danger-ring-soft: rgba(217, 45, 32, 0.15);
+  --viora-danger-ring-soft: rgba(220, 38, 38, 0.15);
 
+  /* Radius */
+  --viora-radius-xs: 4px;
   --viora-radius-sm: 6px;
   --viora-radius-md: 8px;
   --viora-radius-lg: 12px;
   --viora-radius-full: 9999px;
 
+  /* Spacing */
   --viora-spacing-xs: 4px;
   --viora-spacing-sm: 8px;
   --viora-spacing-md: 16px;
   --viora-spacing-lg: 24px;
   --viora-spacing-xl: 32px;
 
+  /* Typography */
   --viora-font-family: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica,
     Arial, sans-serif;
   --viora-font-mono: ui-monospace, "Cascadia Code", "JetBrains Mono", Menlo,
@@ -70,13 +101,98 @@
   --viora-font-size-2xl: 1.5rem;
   --viora-font-size-3xl: 1.875rem;
 
-  --viora-shadow-sm: 0 1px 2px rgba(16, 24, 40, 0.05);
-  --viora-shadow-md: 0 4px 12px rgba(16, 24, 40, 0.08);
-  --viora-shadow-lg: 0 12px 32px rgba(16, 24, 40, 0.12);
+  /* Elevation */
+  --viora-shadow-sm: 0 1px 2px rgba(16, 20, 30, 0.06);
+  --viora-shadow-md: 0 4px 14px rgba(16, 20, 30, 0.1);
+  --viora-shadow-lg: 0 12px 34px rgba(16, 20, 30, 0.16);
 
-  --viora-transition-fast: 120ms ease;
+  /* Motion */
+  --viora-transition-fast: 140ms ease;
   --viora-transition-base: 200ms ease;
+  --viora-transition: var(--viora-transition-base);
 
+  /* Layer */
   --viora-z-index-popover: 9990;
   --viora-z-index-toast: 9999;
+
+  /* Slider fill defaults (overridden inline by the component) */
+  --viora-slider-fill: #4f46e5;
+  --viora-slider-progress: 50%;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    color-scheme: dark;
+
+    --viora-primary: #6366f1;
+    --viora-primary-hover: #4f46e5;
+    --viora-primary-active: #4338ca;
+    --viora-primary-foreground: #ffffff;
+    --viora-primary-soft: rgba(99, 102, 241, 0.16);
+    --viora-primary-soft-hover: rgba(99, 102, 241, 0.24);
+    --viora-primary-soft-foreground: #c7cbff;
+
+    --viora-secondary: #232a3c;
+    --viora-secondary-hover: #2a3248;
+    --viora-secondary-active: #333b52;
+    --viora-secondary-foreground: #cfd6e4;
+
+    --viora-ghost-hover: #1f2534;
+    --viora-ghost-active: #262e41;
+
+    --viora-danger: #ef4444;
+    --viora-danger-hover: #dc2626;
+    --viora-danger-active: #b91c1c;
+    --viora-danger-foreground: #ffffff;
+    --viora-danger-soft: rgba(239, 68, 68, 0.16);
+    --viora-danger-soft-hover: rgba(239, 68, 68, 0.24);
+    --viora-danger-soft-foreground: #fda4a4;
+
+    --viora-success: #22c55e;
+    --viora-success-hover: #16a34a;
+    --viora-success-active: #15803d;
+    --viora-success-foreground: #052916;
+    --viora-success-soft: rgba(34, 197, 94, 0.16);
+    --viora-success-soft-hover: rgba(34, 197, 94, 0.24);
+    --viora-success-soft-foreground: #6ee7b7;
+
+    --viora-warning: #fbbf24;
+    --viora-warning-hover: #f59e0b;
+    --viora-warning-active: #d97706;
+    --viora-warning-foreground: #2b1a04;
+    --viora-warning-soft: rgba(251, 191, 36, 0.16);
+    --viora-warning-soft-hover: rgba(251, 191, 36, 0.24);
+    --viora-warning-soft-foreground: #fcd34d;
+
+    --viora-info: #38bdf8;
+    --viora-info-hover: #0ea5e9;
+    --viora-info-active: #0284c7;
+    --viora-info-foreground: #082f44;
+    --viora-info-soft: rgba(56, 189, 248, 0.16);
+    --viora-info-soft-hover: rgba(56, 189, 248, 0.24);
+    --viora-info-soft-foreground: #7dd3fc;
+
+    --viora-background: #10131a;
+    --viora-surface: #171b24;
+    --viora-card: #171b24;
+    --viora-foreground: #e7ebf3;
+    --viora-muted: #1e2330;
+    --viora-muted-hover: #252b3b;
+    --viora-muted-foreground: #9aa3b5;
+    --viora-border: #2a3142;
+    --viora-border-strong: #3a4257;
+    --viora-border-hover: #556181;
+    --viora-skeleton-highlight: rgba(255, 255, 255, 0.05);
+    --viora-overlay: rgba(6, 8, 13, 0.6);
+
+    --viora-focus-ring: #818cf8;
+    --viora-focus-ring-soft: rgba(129, 140, 248, 0.3);
+    --viora-danger-ring-soft: rgba(239, 68, 68, 0.25);
+
+    --viora-shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.35);
+    --viora-shadow-md: 0 4px 14px rgba(0, 0, 0, 0.4);
+    --viora-shadow-lg: 0 12px 34px rgba(0, 0, 0, 0.5);
+
+    --viora-slider-fill: #6366f1;
+  }
 }

@@ -42,14 +42,14 @@ src/
 
 ## Component inventory
 
-Built over milestones 1–56: **59 public exports** across **56 components**, backed by **56 test suites** (762 passing tests). Every milestone ships with lint, unit tests, a library build, and a Storybook build all green.
+Built over milestones 1–59: **64 public exports** across **60 components**, backed by **60 test suites** (803 passing tests). Every milestone ships with lint, unit tests, a library build, and a Storybook build all green.
 
 ### Actions
 
 | Component | Description |
 | --- | --- |
-| `Button` | Buttons with `variant`, `size`, `loading`, `disabled` states |
-| `Menu` | Accessible dropdown menu with keyboard navigation |
+| `Button`, `ButtonGroup` | Buttons with `variant`, `size`, `loading`, `disabled` states |
+| `Menu`, `ContextMenu` | Accessible dropdown + right-click menus with keyboard navigation |
 | `Toolbar` + `ToolbarSeparator` | Toolbar container with optional separators |
 
 ### Forms & inputs
@@ -84,6 +84,7 @@ Built over milestones 1–56: **59 public exports** across **56 components**, ba
 | Component | Description |
 | --- | --- |
 | `Modal`, `Drawer` | Portalled, focus-trapping dialogs |
+| `AlertDialog` | Confirmation dialog built on `Modal` with `alertdialog` role |
 | `Tooltip` | Hover/focus tooltips |
 | `Accordion` | Collapsible sections |
 | `CommandPalette` | Keyboard-driven search overlay |
@@ -109,11 +110,11 @@ Built over milestones 1–56: **59 public exports** across **56 components**, ba
 | `Markdown`, `CodeBlock` | Content renderers (zero dependencies) |
 | `List`, `Divider`, `Card`, `EmptyState` | Layout and content primitives |
 | `Avatar`, `AvatarGroup` | Identities and overlapping stacks |
-| `Heading`, `Text`, `Link` | Typography primitives |
+| `Heading`, `Text`, `Link`, `Kbd` | Typography primitives |
 
 ## Theming
 
-All design tokens are CSS variables prefixed with `--viora-`, defined in `src/styles/tokens.css`. They can be overridden by consumers.
+All design tokens are CSS variables prefixed with `--viora-`, defined in `src/styles/tokens.css`. They can be overridden by consumers. The token set covers light and dark themes (`prefers-color-scheme`) with a full interaction state for every status color (base, hover, active, foreground, soft).
 
 ## License
 

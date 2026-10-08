@@ -6,7 +6,7 @@
   align-items: center;
   justify-content: center;
   padding: var(--viora-spacing-lg);
-  background: rgba(16, 24, 40, 0.5);
+  background: var(--viora-overlay);
   font-family: var(--viora-font-family);
   animation: viora-modal-overlay-in 150ms ease;
 }

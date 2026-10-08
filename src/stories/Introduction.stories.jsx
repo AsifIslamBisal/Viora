@@ -2,16 +2,16 @@ import { Button } from "../components/Button/Button";
 import "./introduction.css";
 
 const STATS = [
-  { value: "56", label: "components" },
-  { value: "59", label: "public exports" },
-  { value: "56", label: "test suites" },
-  { value: "762", label: "passing tests" },
+  { value: "60", label: "components" },
+  { value: "64", label: "public exports" },
+  { value: "60", label: "test suites" },
+  { value: "803", label: "passing tests" },
 ];
 
 const CATEGORIES = [
   {
     name: "Actions",
-    items: ["Button", "Menu", "Toolbar"],
+    items: ["Button", "ButtonGroup", "Menu", "ContextMenu", "Toolbar"],
   },
   {
     name: "Forms",
@@ -51,7 +51,7 @@ const CATEGORIES = [
   },
   {
     name: "Overlays",
-    items: ["Modal", "Drawer", "Tooltip", "Accordion", "CommandPalette", "Calendar", "DatePicker"],
+    items: ["Modal", "AlertDialog", "Drawer", "Tooltip", "Accordion", "CommandPalette", "Calendar", "DatePicker"],
   },
   {
     name: "Navigation",
@@ -73,6 +73,7 @@ const CATEGORIES = [
       "Heading",
       "Text",
       "Link",
+      "Kbd",
     ],
   },
 ];

@@ -99,7 +99,7 @@
   width: 14px;
   height: 14px;
   border-radius: var(--viora-radius-full);
-  border: 1px solid rgba(16, 24, 40, 0.1);
+  border: 1px solid var(--viora-border-strong);
 }
 
 .viora-intro__actions {
