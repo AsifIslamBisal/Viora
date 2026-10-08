@@ -13,6 +13,7 @@ export function Modal({
   description,
   closeOnOverlayClick = true,
   closeOnEscape = true,
+  showCloseButton = true,
   className,
   children,
   ...rest
@@ -104,21 +105,23 @@ export function Modal({
               </p>
             ) : null}
           </div>
-          <button
-            type="button"
-            className="viora-modal__close"
-            aria-label="Close"
-            onClick={onClose}
-          >
-            <svg viewBox="0 0 20 20" fill="none" aria-hidden="true">
-              <path
-                d="M6 6l8 8M14 6l-8 8"
-                stroke="currentColor"
-                strokeWidth="1.5"
-                strokeLinecap="round"
-              />
-            </svg>
-          </button>
+          {showCloseButton ? (
+            <button
+              type="button"
+              className="viora-modal__close"
+              aria-label="Close"
+              onClick={onClose}
+            >
+              <svg viewBox="0 0 20 20" fill="none" aria-hidden="true">
+                <path
+                  d="M6 6l8 8M14 6l-8 8"
+                  stroke="currentColor"
+                  strokeWidth="1.5"
+                  strokeLinecap="round"
+                />
+              </svg>
+            </button>
+          ) : null}
         </header>
         <div className="viora-modal__content">{children}</div>
       </div>

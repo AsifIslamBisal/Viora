@@ -1,0 +1,12 @@
+.viora-alert-dialog__body {
+  font-size: var(--viora-font-size-sm);
+  color: var(--viora-muted-foreground);
+  line-height: 1.6;
+}
+
+.viora-alert-dialog__footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: var(--viora-spacing-sm);
+  margin-top: var(--viora-spacing-lg);
+}

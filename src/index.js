@@ -59,5 +59,6 @@ export { EmptyState } from "./components/EmptyState/EmptyState";
 export { SegmentedControl } from "./components/SegmentedControl/SegmentedControl";
 export { Kbd } from "./components/Kbd/Kbd";
 export { ButtonGroup } from "./components/ButtonGroup/ButtonGroup";
+export { AlertDialog } from "./components/AlertDialog/AlertDialog";
 
 export const VERSION = "0.1.0";

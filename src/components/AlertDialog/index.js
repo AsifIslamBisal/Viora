@@ -1,0 +1,1 @@
+export { AlertDialog, default } from "./AlertDialog";
