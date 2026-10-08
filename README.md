@@ -40,6 +40,77 @@ src/
 └── index.js      # public package entry
 ```
 
+## Component inventory
+
+Built over milestones 1–56: **59 public exports** across **56 components**, backed by **56 test suites** (762 passing tests). Every milestone ships with lint, unit tests, a library build, and a Storybook build all green.
+
+### Actions
+
+| Component | Description |
+| --- | --- |
+| `Button` | Buttons with `variant`, `size`, `loading`, `disabled` states |
+| `Menu` | Accessible dropdown menu with keyboard navigation |
+| `Toolbar` + `ToolbarSeparator` | Toolbar container with optional separators |
+
+### Forms & inputs
+
+| Component | Description |
+| --- | --- |
+| `Input`, `Textarea` | Text fields with label/hint/error wiring |
+| `Checkbox`, `Switch` | Boolean inputs |
+| `Select`, `Combobox` | Single-select lists (dropdown + typeahead) |
+| `RadioGroup`, `Radio` | Radio button groups |
+| `NumberInput` | Numeric stepper input |
+| `Slider` | Range slider with tones and value label |
+| `MultiSelect` | Multi-value listbox with removable tag chips |
+| `TimePicker` | Time input (24h) with clock icon |
+| `ColorPicker` | Palette popover + native and hex input |
+| `SegmentedControl` | Single-choice segmented button row |
+| `FileUpload` | Drag-and-drop file dropzone |
+| `Label`, `Fieldset` | Form primitives |
+
+### Feedback
+
+| Component | Description |
+| --- | --- |
+| `Alert`, `NotificationBanner` | Tone-based messages (`status`/`alert` roles) |
+| `Spinner`, `Progress`, `Skeleton` | Loading indicators |
+| `Toast` (`ToastProvider`, `useToast`) | Toast notification system |
+| `Rating` | Star rating (APG slider pattern) |
+| `Badge`, `Tag`, `Stat` | Compact display / metadata |
+
+### Overlays & disclosure
+
+| Component | Description |
+| --- | --- |
+| `Modal`, `Drawer` | Portalled, focus-trapping dialogs |
+| `Tooltip` | Hover/focus tooltips |
+| `Accordion` | Collapsible sections |
+| `CommandPalette` | Keyboard-driven search overlay |
+| `Calendar`, `DatePicker` | Date selection (native `Date`, no deps) |
+
+### Navigation & structure
+
+| Component | Description |
+| --- | --- |
+| `Breadcrumb` | Trails with separators and links |
+| `Tabs` | Tab panels |
+| `Tree` | APG tree with keyboard navigation |
+| `Pagination` | Page numbers + navigation |
+| `Carousel` | Auto-playing slide rails (arrows, dots) |
+| `Stepper` | Progress step indicators |
+| `Timeline` | Vertical event feed |
+
+### Data display
+
+| Component | Description |
+| --- | --- |
+| `Table`, `DataGrid` | Static and sortable/paginated/selectable tables |
+| `Markdown`, `CodeBlock` | Content renderers (zero dependencies) |
+| `List`, `Divider`, `Card`, `EmptyState` | Layout and content primitives |
+| `Avatar`, `AvatarGroup` | Identities and overlapping stacks |
+| `Heading`, `Text`, `Link` | Typography primitives |
+
 ## Theming
 
 All design tokens are CSS variables prefixed with `--viora-`, defined in `src/styles/tokens.css`. They can be overridden by consumers.

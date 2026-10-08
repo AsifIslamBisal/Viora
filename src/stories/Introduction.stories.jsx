@@ -1,6 +1,82 @@
 import { Button } from "../components/Button/Button";
 import "./introduction.css";
 
+const STATS = [
+  { value: "56", label: "components" },
+  { value: "59", label: "public exports" },
+  { value: "56", label: "test suites" },
+  { value: "762", label: "passing tests" },
+];
+
+const CATEGORIES = [
+  {
+    name: "Actions",
+    items: ["Button", "Menu", "Toolbar"],
+  },
+  {
+    name: "Forms",
+    items: [
+      "Input",
+      "Textarea",
+      "Checkbox",
+      "Switch",
+      "Select",
+      "Combobox",
+      "RadioGroup",
+      "NumberInput",
+      "Slider",
+      "MultiSelect",
+      "TimePicker",
+      "ColorPicker",
+      "SegmentedControl",
+      "FileUpload",
+      "Label",
+      "Fieldset",
+    ],
+  },
+  {
+    name: "Feedback",
+    items: [
+      "Alert",
+      "NotificationBanner",
+      "Spinner",
+      "Progress",
+      "Skeleton",
+      "Toast",
+      "Rating",
+      "Badge",
+      "Tag",
+      "Stat",
+    ],
+  },
+  {
+    name: "Overlays",
+    items: ["Modal", "Drawer", "Tooltip", "Accordion", "CommandPalette", "Calendar", "DatePicker"],
+  },
+  {
+    name: "Navigation",
+    items: ["Breadcrumb", "Tabs", "Tree", "Pagination", "Carousel", "Stepper", "Timeline"],
+  },
+  {
+    name: "Data",
+    items: [
+      "Table",
+      "DataGrid",
+      "Markdown",
+      "CodeBlock",
+      "List",
+      "Divider",
+      "Card",
+      "EmptyState",
+      "Avatar",
+      "AvatarGroup",
+      "Heading",
+      "Text",
+      "Link",
+    ],
+  },
+];
+
 const SWATCHES = [
   { name: "Primary", color: "var(--viora-primary)" },
   { name: "Foreground", color: "var(--viora-foreground)" },
@@ -55,6 +131,18 @@ export const GettingStarted = () => (
     </section>
 
     <section className="viora-intro__section">
+      <p className="viora-intro__label">Library stats</p>
+      <div className="viora-intro__stats">
+        {STATS.map((stat) => (
+          <span className="viora-intro__stat" key={stat.label}>
+            <strong>{stat.value}</strong>
+            {stat.label}
+          </span>
+        ))}
+      </div>
+    </section>
+
+    <section className="viora-intro__section">
       <p className="viora-intro__label">Components</p>
       <div className="viora-intro__actions">
         <Button>Primary</Button>
@@ -63,6 +151,22 @@ export const GettingStarted = () => (
         <Button variant="ghost">Ghost</Button>
         <Button variant="danger">Danger</Button>
       </div>
+    </section>
+
+    <section className="viora-intro__section">
+      <p className="viora-intro__label">Full inventory</p>
+      {CATEGORIES.map((category) => (
+        <div className="viora-intro__category" key={category.name}>
+          <p className="viora-intro__category-name">{category.name}</p>
+          <div className="viora-intro__chips">
+            {category.items.map((item) => (
+              <span className="viora-intro__component" key={item}>
+                {item}
+              </span>
+            ))}
+          </div>
+        </div>
+      ))}
     </section>
   </div>
 );
