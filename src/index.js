@@ -52,5 +52,6 @@ export { CommandPalette } from "./components/CommandPalette/CommandPalette";
 export { ColorPicker } from "./components/ColorPicker/ColorPicker";
 export { MultiSelect } from "./components/MultiSelect/MultiSelect";
 export { Carousel } from "./components/Carousel/Carousel";
+export { Stepper } from "./components/Stepper/Stepper";
 
 export const VERSION = "0.1.0";

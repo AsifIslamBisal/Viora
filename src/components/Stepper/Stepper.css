@@ -1,0 +1,132 @@
+.viora-stepper {
+  box-sizing: border-box;
+  font-family: var(--viora-font-family);
+  color: var(--viora-foreground);
+  font-size: var(--viora-font-size-sm);
+}
+
+.viora-stepper__list {
+  display: flex;
+  gap: 0;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.viora-stepper--horizontal .viora-stepper__list {
+  align-items: flex-start;
+}
+
+.viora-stepper__item {
+  position: relative;
+  flex: 1;
+  min-width: 0;
+}
+
+.viora-stepper--vertical .viora-stepper__item {
+  padding-left: 28px;
+}
+
+.viora-stepper--horizontal .viora-stepper__item:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  top: 12px;
+  left: calc(50% + 30px);
+  right: calc(-50% + 30px);
+  height: 2px;
+  background-color: var(--viora-border);
+}
+
+.viora-stepper--horizontal .viora-stepper__item--completed:not(:last-child)::after {
+  background-color: var(--viora-primary);
+}
+
+.viora-stepper--vertical .viora-stepper__item:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  top: 34px;
+  left: 11px;
+  bottom: -8px;
+  width: 2px;
+  background-color: var(--viora-border);
+}
+
+.viora-stepper--vertical .viora-stepper__item--completed:not(:last-child)::after {
+  background-color: var(--viora-primary);
+}
+
+.viora-stepper__step {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  width: 100%;
+  padding: 0;
+  border: none;
+  background: none;
+  color: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+
+.viora-stepper__step:focus-visible {
+  outline: 2px solid var(--viora-focus-ring);
+  outline-offset: 2px;
+  border-radius: var(--viora-radius-sm);
+}
+
+.viora-stepper__badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 24px;
+  width: 24px;
+  height: 24px;
+  border: 2px solid var(--viora-border);
+  border-radius: var(--viora-radius-full);
+  background-color: var(--viora-surface);
+  color: var(--viora-muted-foreground);
+  font-size: var(--viora-font-size-sm);
+  font-weight: 600;
+}
+
+.viora-stepper__badge svg {
+  width: 12px;
+  height: 12px;
+}
+
+.viora-stepper__item--current .viora-stepper__badge {
+  border-color: var(--viora-primary);
+  color: var(--viora-primary);
+}
+
+.viora-stepper__item--completed .viora-stepper__badge {
+  border-color: var(--viora-primary);
+  background-color: var(--viora-primary);
+  color: var(--viora-primary-foreground);
+}
+
+.viora-stepper__text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding-top: 2px;
+  min-width: 0;
+}
+
+.viora-stepper--horizontal .viora-stepper__text {
+  align-items: center;
+  text-align: center;
+}
+
+.viora-stepper__label {
+  font-weight: 600;
+}
+
+.viora-stepper__item--upcoming .viora-stepper__label {
+  color: var(--viora-muted-foreground);
+}
+
+.viora-stepper__description {
+  color: var(--viora-muted-foreground);
+  font-size: var(--viora-font-size-xs);
+}
