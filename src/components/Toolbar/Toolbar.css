@@ -1,0 +1,33 @@
+.viora-toolbar {
+  box-sizing: border-box;
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
+  gap: var(--viora-spacing-sm);
+  padding: var(--viora-spacing-sm);
+  border: 1px solid var(--viora-border);
+  border-radius: var(--viora-radius-md);
+  background-color: var(--viora-surface);
+  font-family: var(--viora-font-family);
+}
+
+.viora-toolbar--vertical {
+  flex-direction: column;
+  align-items: stretch;
+  width: fit-content;
+}
+
+.viora-toolbar__separator {
+  box-sizing: border-box;
+  flex: none;
+  width: 1px;
+  height: 20px;
+  margin: 0 var(--viora-spacing-xs);
+  background-color: var(--viora-border);
+}
+
+.viora-toolbar__separator--horizontal {
+  width: 100%;
+  height: 1px;
+  margin: var(--viora-spacing-xs) 0;
+}

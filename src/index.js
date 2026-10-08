@@ -37,5 +37,6 @@ export { AvatarGroup } from "./components/AvatarGroup/AvatarGroup";
 export { Slider } from "./components/Slider/Slider";
 export { Stat } from "./components/Stat/Stat";
 export { Drawer } from "./components/Drawer/Drawer";
+export { Toolbar, ToolbarSeparator } from "./components/Toolbar/Toolbar";
 
 export const VERSION = "0.1.0";
