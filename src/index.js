@@ -53,5 +53,6 @@ export { ColorPicker } from "./components/ColorPicker/ColorPicker";
 export { MultiSelect } from "./components/MultiSelect/MultiSelect";
 export { Carousel } from "./components/Carousel/Carousel";
 export { Stepper } from "./components/Stepper/Stepper";
+export { Timeline } from "./components/Timeline/Timeline";
 
 export const VERSION = "0.1.0";
