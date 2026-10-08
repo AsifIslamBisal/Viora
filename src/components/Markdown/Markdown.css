@@ -1,0 +1,97 @@
+.viora-markdown {
+  box-sizing: border-box;
+  font-family: var(--viora-font-family);
+  font-size: var(--viora-font-size-md);
+  line-height: 1.7;
+  color: var(--viora-foreground);
+  word-wrap: break-word;
+}
+
+.viora-markdown h1,
+.viora-markdown h2,
+.viora-markdown h3,
+.viora-markdown h4,
+.viora-markdown h5,
+.viora-markdown h6 {
+  margin: 1.5em 0 0.5em;
+  line-height: 1.3;
+  color: var(--viora-foreground);
+}
+
+.viora-markdown h1 {
+  font-size: var(--viora-font-size-2xl);
+}
+
+.viora-markdown h2 {
+  font-size: var(--viora-font-size-xl);
+}
+
+.viora-markdown h3 {
+  font-size: var(--viora-font-size-lg);
+}
+
+.viora-markdown h4,
+.viora-markdown h5,
+.viora-markdown h6 {
+  font-size: var(--viora-font-size-md);
+}
+
+.viora-markdown p {
+  margin: 0.5em 0;
+}
+
+.viora-markdown a {
+  color: var(--viora-primary);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.viora-markdown strong {
+  font-weight: 600;
+}
+
+.viora-markdown code {
+  padding: 0.15em 0.4em;
+  border-radius: var(--viora-radius-sm);
+  background-color: var(--viora-secondary);
+  font-family: var(--viora-font-mono);
+  font-size: 0.875em;
+}
+
+.viora-markdown pre {
+  overflow-x: auto;
+  margin: 0.75em 0;
+  padding: var(--viora-spacing-md);
+  border-radius: var(--viora-radius-lg);
+  background-color: var(--viora-secondary);
+  border: 1px solid var(--viora-border);
+}
+
+.viora-markdown pre code {
+  padding: 0;
+  background-color: transparent;
+}
+
+.viora-markdown ul,
+.viora-markdown ol {
+  margin: 0.5em 0;
+  padding-left: 1.5em;
+}
+
+.viora-markdown li {
+  margin: 0.25em 0;
+}
+
+.viora-markdown blockquote {
+  margin: 0.75em 0;
+  padding: var(--viora-spacing-xs) var(--viora-spacing-md);
+  border-left: 3px solid var(--viora-primary);
+  background-color: var(--viora-primary-soft);
+  color: var(--viora-muted-foreground);
+}
+
+.viora-markdown hr {
+  margin: 1.25em 0;
+  border: none;
+  border-top: 1px solid var(--viora-border);
+}

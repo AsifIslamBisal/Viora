@@ -42,5 +42,6 @@ export { Rating } from "./components/Rating/Rating";
 export { CodeBlock } from "./components/CodeBlock/CodeBlock";
 export { Combobox } from "./components/Combobox/Combobox";
 export { FileUpload } from "./components/FileUpload/FileUpload";
+export { Markdown } from "./components/Markdown/Markdown";
 
 export const VERSION = "0.1.0";
