@@ -1,0 +1,129 @@
+.viora-calendar {
+  box-sizing: border-box;
+  display: inline-flex;
+  flex-direction: column;
+  gap: var(--viora-spacing-sm);
+  padding: var(--viora-spacing-md);
+  border: 1px solid var(--viora-border);
+  border-radius: var(--viora-radius-lg);
+  background-color: var(--viora-surface);
+  font-family: var(--viora-font-family);
+  color: var(--viora-foreground);
+}
+
+.viora-calendar__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--viora-spacing-md);
+}
+
+.viora-calendar__label {
+  font-size: var(--viora-font-size-sm);
+  font-weight: 600;
+}
+
+.viora-calendar__nav {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  padding: 0;
+  border: none;
+  border-radius: var(--viora-radius-md);
+  background: transparent;
+  color: var(--viora-muted-foreground);
+  cursor: pointer;
+  transition: background-color var(--viora-transition-fast),
+    color var(--viora-transition-fast);
+}
+
+.viora-calendar__nav svg {
+  width: 16px;
+  height: 16px;
+}
+
+.viora-calendar__nav:hover:not(:disabled) {
+  background-color: var(--viora-secondary);
+  color: var(--viora-foreground);
+}
+
+.viora-calendar__nav:disabled {
+  cursor: default;
+  opacity: 0.4;
+}
+
+.viora-calendar__nav:focus-visible,
+.viora-calendar__day:focus-visible {
+  outline: 2px solid var(--viora-focus-ring);
+  outline-offset: 2px;
+}
+
+.viora-calendar__grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: var(--viora-spacing-xs);
+}
+
+.viora-calendar__weekday {
+  font-size: var(--viora-font-size-xs);
+  font-weight: 600;
+  color: var(--viora-muted-foreground);
+  text-align: center;
+}
+
+.viora-calendar__cell {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.viora-calendar__spacer {
+  height: 32px;
+}
+
+.viora-calendar__day {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  border: none;
+  border-radius: var(--viora-radius-full);
+  background: transparent;
+  font-family: var(--viora-font-family);
+  font-size: var(--viora-font-size-sm);
+  color: var(--viora-foreground);
+  cursor: pointer;
+  transition: background-color var(--viora-transition-fast),
+    color var(--viora-transition-fast);
+}
+
+.viora-calendar__day:hover:not(:disabled) {
+  background-color: var(--viora-secondary);
+}
+
+.viora-calendar__day--selected {
+  background-color: var(--viora-primary);
+  color: var(--viora-primary-foreground);
+  font-weight: 600;
+}
+
+.viora-calendar__day--selected:hover:not(:disabled) {
+  background-color: var(--viora-primary);
+  color: var(--viora-primary-foreground);
+}
+
+.viora-calendar__day:disabled {
+  cursor: default;
+  opacity: 0.4;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .viora-calendar__nav,
+  .viora-calendar__day {
+    transition: none;
+  }
+}
