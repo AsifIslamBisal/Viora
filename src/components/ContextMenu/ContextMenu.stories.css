@@ -1,0 +1,11 @@
+.viora-story-context-panel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 140px;
+  border: 1px dashed var(--viora-border);
+  border-radius: var(--viora-radius-lg);
+  color: var(--viora-muted-foreground);
+  font-family: var(--viora-font-family);
+  font-size: var(--viora-font-size-sm);
+}

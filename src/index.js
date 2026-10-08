@@ -60,5 +60,6 @@ export { SegmentedControl } from "./components/SegmentedControl/SegmentedControl
 export { Kbd } from "./components/Kbd/Kbd";
 export { ButtonGroup } from "./components/ButtonGroup/ButtonGroup";
 export { AlertDialog } from "./components/AlertDialog/AlertDialog";
+export { ContextMenu } from "./components/ContextMenu/ContextMenu";
 
 export const VERSION = "0.1.0";
