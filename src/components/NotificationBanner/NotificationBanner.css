@@ -1,0 +1,92 @@
+.viora-notification {
+  box-sizing: border-box;
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  padding: 12px 14px;
+  border: 1px solid var(--viora-border);
+  border-radius: var(--viora-radius-lg);
+  background-color: var(--viora-surface);
+  font-family: var(--viora-font-family);
+  color: var(--viora-foreground);
+}
+
+.viora-notification--info {
+  border-color: color-mix(in srgb, var(--viora-primary) 35%, var(--viora-border));
+  background-color: color-mix(in srgb, var(--viora-primary) 8%, var(--viora-surface));
+  color: var(--viora-primary);
+}
+
+.viora-notification--success {
+  border-color: color-mix(in srgb, var(--viora-success) 35%, var(--viora-border));
+  background-color: color-mix(in srgb, var(--viora-success) 8%, var(--viora-surface));
+  color: var(--viora-success);
+}
+
+.viora-notification--warning {
+  border-color: color-mix(in srgb, var(--viora-warning) 40%, var(--viora-border));
+  background-color: color-mix(in srgb, var(--viora-warning) 10%, var(--viora-surface));
+  color: var(--viora-warning);
+}
+
+.viora-notification--danger {
+  border-color: color-mix(in srgb, var(--viora-danger) 35%, var(--viora-border));
+  background-color: color-mix(in srgb, var(--viora-danger) 8%, var(--viora-surface));
+  color: var(--viora-danger);
+}
+
+.viora-notification__icon {
+  display: inline-flex;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+.viora-notification__icon svg {
+  width: 20px;
+  height: 20px;
+}
+
+.viora-notification__body {
+  flex: 1;
+  min-width: 0;
+  color: var(--viora-foreground);
+}
+
+.viora-notification__title {
+  margin: 0;
+  font-size: var(--viora-font-size-sm);
+  font-weight: 700;
+}
+
+.viora-notification__content {
+  margin-top: 2px;
+  font-size: var(--viora-font-size-sm);
+  color: var(--viora-muted-foreground);
+}
+
+.viora-notification__close {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 24px;
+  height: 24px;
+  padding: 0;
+  border: none;
+  border-radius: var(--viora-radius-sm);
+  background: none;
+  color: var(--viora-muted-foreground);
+  font-size: 18px;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.viora-notification__close:hover {
+  background-color: var(--viora-secondary);
+  color: var(--viora-foreground);
+}
+
+.viora-notification__close:focus-visible {
+  outline: 2px solid var(--viora-focus-ring);
+  outline-offset: 1px;
+}
