@@ -40,5 +40,6 @@ export { Drawer } from "./components/Drawer/Drawer";
 export { Toolbar, ToolbarSeparator } from "./components/Toolbar/Toolbar";
 export { Rating } from "./components/Rating/Rating";
 export { CodeBlock } from "./components/CodeBlock/CodeBlock";
+export { Combobox } from "./components/Combobox/Combobox";
 
 export const VERSION = "0.1.0";

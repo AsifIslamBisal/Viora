@@ -1,0 +1,47 @@
+@import "../../styles/fields.css";
+
+.viora-combobox {
+  box-sizing: border-box;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: var(--viora-spacing-xs);
+  font-family: var(--viora-font-family);
+}
+
+.viora-combobox__listbox {
+  box-sizing: border-box;
+  position: absolute;
+  top: calc(100% + var(--viora-spacing-xs));
+  left: 0;
+  right: 0;
+  z-index: var(--viora-z-index-menu, 20);
+  margin: 0;
+  padding: var(--viora-spacing-xs);
+  list-style: none;
+  max-height: 240px;
+  overflow-y: auto;
+  background-color: var(--viora-surface);
+  border: 1px solid var(--viora-border);
+  border-radius: var(--viora-radius-md);
+  box-shadow: var(--viora-shadow-md);
+}
+
+.viora-combobox__option {
+  display: flex;
+  align-items: center;
+  padding: 8px 10px;
+  border-radius: var(--viora-radius-sm);
+  font-size: var(--viora-font-size-sm);
+  color: var(--viora-foreground);
+  cursor: pointer;
+}
+
+.viora-combobox__option--active {
+  background-color: var(--viora-secondary);
+}
+
+.viora-combobox__option--selected {
+  font-weight: 600;
+  color: var(--viora-primary);
+}
