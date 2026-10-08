@@ -1,0 +1,39 @@
+@import "../../styles/fields.css";
+
+.viora-time-picker {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: var(--viora-spacing-xs);
+  font-family: var(--viora-font-family);
+}
+
+.viora-time-picker input {
+  padding-right: 2.25rem;
+}
+
+.viora-time-picker__control {
+  position: relative;
+}
+
+.viora-time-picker__control:focus-within .viora-time-picker__icon {
+  color: var(--viora-primary);
+}
+
+.viora-time-picker__icon {
+  position: absolute;
+  top: 50%;
+  right: 12px;
+  width: 16px;
+  height: 16px;
+  transform: translateY(-50%);
+  pointer-events: none;
+  color: var(--viora-muted-foreground);
+  transition: color var(--viora-transition-fast);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .viora-time-picker__icon {
+    transition: none;
+  }
+}
