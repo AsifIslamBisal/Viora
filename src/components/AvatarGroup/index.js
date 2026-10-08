@@ -1,0 +1,1 @@
+export { AvatarGroup, default } from "./AvatarGroup";
