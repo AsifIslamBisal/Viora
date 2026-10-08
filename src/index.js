@@ -45,5 +45,6 @@ export { FileUpload } from "./components/FileUpload/FileUpload";
 export { Markdown } from "./components/Markdown/Markdown";
 export { Calendar } from "./components/Calendar/Calendar";
 export { DatePicker } from "./components/DatePicker/DatePicker";
+export { Tree } from "./components/Tree/Tree";
 
 export const VERSION = "0.1.0";
