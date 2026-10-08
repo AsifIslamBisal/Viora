@@ -38,5 +38,6 @@ export { Slider } from "./components/Slider/Slider";
 export { Stat } from "./components/Stat/Stat";
 export { Drawer } from "./components/Drawer/Drawer";
 export { Toolbar, ToolbarSeparator } from "./components/Toolbar/Toolbar";
+export { Rating } from "./components/Rating/Rating";
 
 export const VERSION = "0.1.0";
