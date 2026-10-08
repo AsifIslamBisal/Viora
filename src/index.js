@@ -34,5 +34,6 @@ export { Table } from "./components/Table/Table";
 export { Pagination } from "./components/Pagination/Pagination";
 export { NumberInput } from "./components/NumberInput/NumberInput";
 export { AvatarGroup } from "./components/AvatarGroup/AvatarGroup";
+export { Slider } from "./components/Slider/Slider";
 
 export const VERSION = "0.1.0";
