@@ -1,0 +1,98 @@
+.viora-code-block {
+  box-sizing: border-box;
+  overflow: hidden;
+  border: 1px solid var(--viora-border);
+  border-radius: var(--viora-radius-lg);
+  background-color: var(--viora-secondary);
+  font-family: var(--viora-font-family);
+}
+
+.viora-code-block__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--viora-spacing-md);
+  padding: var(--viora-spacing-sm) var(--viora-spacing-md);
+  border-bottom: 1px solid var(--viora-border);
+}
+
+.viora-code-block__language {
+  font-family: var(--viora-font-mono);
+  font-size: var(--viora-font-size-xs);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--viora-muted-foreground);
+}
+
+.viora-code-block__copy {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--viora-spacing-xs);
+  padding: 4px 10px;
+  border: 1px solid var(--viora-border);
+  border-radius: var(--viora-radius-md);
+  background-color: var(--viora-surface);
+  color: var(--viora-muted-foreground);
+  font-family: var(--viora-font-family);
+  font-size: var(--viora-font-size-xs);
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color var(--viora-transition-fast),
+    color var(--viora-transition-fast);
+}
+
+.viora-code-block__copy svg {
+  width: 13px;
+  height: 13px;
+}
+
+.viora-code-block__copy:hover {
+  background-color: var(--viora-primary);
+  color: var(--viora-primary-foreground);
+}
+
+.viora-code-block__copy:focus-visible {
+  outline: 2px solid var(--viora-focus-ring);
+  outline-offset: 2px;
+}
+
+.viora-code-block__pre {
+  overflow-x: auto;
+  margin: 0;
+  padding: var(--viora-spacing-md);
+  font-family: var(--viora-font-mono);
+  font-size: var(--viora-font-size-sm);
+  line-height: 1.7;
+  tab-size: 2;
+}
+
+.viora-code-block__code {
+  font-family: inherit;
+  font-size: inherit;
+  color: var(--viora-foreground);
+}
+
+.viora-code-block__line {
+  display: flex;
+  white-space: pre;
+}
+
+.viora-code-block__line-number {
+  flex: none;
+  width: 2.5em;
+  margin-right: var(--viora-spacing-md);
+  color: var(--viora-muted-foreground);
+  user-select: none;
+  text-align: right;
+}
+
+.viora-code-block__line-text {
+  flex: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .viora-code-block__copy {
+    transition: none;
+  }
+}

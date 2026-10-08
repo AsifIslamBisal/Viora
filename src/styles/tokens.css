@@ -60,6 +60,8 @@
 
   --viora-font-family: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica,
     Arial, sans-serif;
+  --viora-font-mono: ui-monospace, "Cascadia Code", "JetBrains Mono", Menlo,
+    Consolas, "Courier New", monospace;
   --viora-font-size-xs: 0.8125rem;
   --viora-font-size-sm: 0.875rem;
   --viora-font-size-md: 1rem;
