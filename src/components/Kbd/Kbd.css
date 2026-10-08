@@ -1,0 +1,28 @@
+.viora-kbd {
+  box-sizing: border-box;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 1.6em;
+  padding: 1px 6px;
+  border: 1px solid var(--viora-border);
+  border-bottom-width: 2px;
+  border-radius: var(--viora-radius-sm);
+  background-color: var(--viora-muted);
+  color: var(--viora-secondary-foreground);
+  font-family: var(--viora-font-mono);
+  font-size: var(--viora-font-size-sm);
+  line-height: 1.4;
+  white-space: nowrap;
+}
+
+.viora-kbd--sm {
+  padding: 0 4px;
+  font-size: var(--viora-font-size-xs);
+  border-radius: 3px;
+}
+
+.viora-kbd--lg {
+  padding: 3px 10px;
+  font-size: var(--viora-font-size-md);
+}

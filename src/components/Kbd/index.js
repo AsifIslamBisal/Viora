@@ -1,0 +1,1 @@
+export { Kbd, default } from "./Kbd";

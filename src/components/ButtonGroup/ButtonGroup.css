@@ -1,0 +1,43 @@
+.viora-button-group {
+  box-sizing: border-box;
+  display: inline-flex;
+  align-items: stretch;
+}
+
+.viora-button-group--vertical {
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.viora-button-group--joined > *:not(:first-child) {
+  margin-inline-start: -1px;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.viora-button-group--joined > *:not(:last-child) {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.viora-button-group--vertical.viora-button-group--joined > *:not(:first-child) {
+  margin-inline-start: 0;
+  margin-top: -1px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.viora-button-group--vertical.viora-button-group--joined > *:not(:last-child) {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.viora-button-group--joined > *:focus-visible {
+  position: relative;
+  z-index: 1;
+}
+
+.viora-button-group--joined > *:disabled {
+  z-index: 0;
+}
