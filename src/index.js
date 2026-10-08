@@ -48,5 +48,6 @@ export { DatePicker } from "./components/DatePicker/DatePicker";
 export { Tree } from "./components/Tree/Tree";
 export { TimePicker } from "./components/TimePicker/TimePicker";
 export { DataGrid } from "./components/DataGrid/DataGrid";
+export { CommandPalette } from "./components/CommandPalette/CommandPalette";
 
 export const VERSION = "0.1.0";
