@@ -1,0 +1,54 @@
+@import "../../styles/fields.css";
+
+.viora-date-picker {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: var(--viora-spacing-xs);
+  font-family: var(--viora-font-family);
+}
+
+.viora-date-picker__control {
+  position: relative;
+}
+
+.viora-date-picker input {
+  padding-right: 2.25rem;
+  cursor: pointer;
+}
+
+.viora-date-picker__control:focus-within .viora-date-picker__icon {
+  color: var(--viora-primary);
+}
+
+.viora-date-picker__icon {
+  position: absolute;
+  top: 50%;
+  right: 12px;
+  width: 16px;
+  height: 16px;
+  transform: translateY(-50%);
+  pointer-events: none;
+  color: var(--viora-muted-foreground);
+  transition: color var(--viora-transition-fast);
+}
+
+.viora-date-picker__popover {
+  box-sizing: border-box;
+  position: absolute;
+  z-index: 30;
+  box-shadow: var(--viora-shadow-lg);
+  border: 1px solid var(--viora-border);
+  border-radius: var(--viora-radius-lg);
+  background-color: var(--viora-surface);
+}
+
+.viora-date-picker__popover[hidden] {
+  display: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .viora-date-picker__icon {
+    transition: none;
+  }
+}

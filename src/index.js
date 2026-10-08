@@ -44,5 +44,6 @@ export { Combobox } from "./components/Combobox/Combobox";
 export { FileUpload } from "./components/FileUpload/FileUpload";
 export { Markdown } from "./components/Markdown/Markdown";
 export { Calendar } from "./components/Calendar/Calendar";
+export { DatePicker } from "./components/DatePicker/DatePicker";
 
 export const VERSION = "0.1.0";
