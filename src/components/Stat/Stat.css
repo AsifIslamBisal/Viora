@@ -1,0 +1,52 @@
+.viora-stat {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: var(--viora-spacing-xs);
+  font-family: var(--viora-font-family);
+}
+
+.viora-stat__label {
+  font-size: var(--viora-font-size-sm);
+  font-weight: 500;
+  color: var(--viora-muted-foreground);
+}
+
+.viora-stat__value {
+  display: inline-flex;
+  align-items: baseline;
+  gap: var(--viora-spacing-xs);
+  font-size: var(--viora-font-size-3xl);
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--viora-foreground);
+  font-variant-numeric: tabular-nums;
+}
+
+.viora-stat__prefix,
+.viora-stat__suffix {
+  font-size: var(--viora-font-size-xl);
+  font-weight: 600;
+  color: var(--viora-muted-foreground);
+}
+
+.viora-stat__delta {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--viora-spacing-xs);
+  font-size: var(--viora-font-size-sm);
+  font-weight: 600;
+}
+
+.viora-stat__delta svg {
+  width: 12px;
+  height: 12px;
+}
+
+.viora-stat__delta--up {
+  color: var(--viora-success);
+}
+
+.viora-stat__delta--down {
+  color: var(--viora-danger);
+}
