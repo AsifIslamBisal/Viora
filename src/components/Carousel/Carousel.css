@@ -1,0 +1,101 @@
+.viora-carousel {
+  box-sizing: border-box;
+  position: relative;
+  font-family: var(--viora-font-family);
+  color: var(--viora-foreground);
+}
+
+.viora-carousel__viewport {
+  overflow: hidden;
+  border: 1px solid var(--viora-border);
+  border-radius: var(--viora-radius-lg);
+}
+
+.viora-carousel__track {
+  display: flex;
+  align-items: stretch;
+  transition: transform 300ms ease;
+  touch-action: pan-y;
+}
+
+.viora-carousel__slide {
+  flex: 0 0 100%;
+  min-width: 0;
+}
+
+.viora-carousel__arrows {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 12px;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+.viora-carousel__arrow {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  padding: 0;
+  border: 1px solid var(--viora-border);
+  border-radius: var(--viora-radius-full);
+  background-color: var(--viora-surface);
+  color: var(--viora-foreground);
+  font-size: 20px;
+  line-height: 1;
+  box-shadow: 0 2px 10px rgb(0 0 0 / 0.12);
+  cursor: pointer;
+  pointer-events: auto;
+  transition: background-color var(--viora-transition-fast);
+}
+
+.viora-carousel__arrow:hover:not(:disabled) {
+  background-color: var(--viora-secondary);
+}
+
+.viora-carousel__arrow:disabled {
+  cursor: default;
+  opacity: 0.4;
+}
+
+.viora-carousel__arrow:focus-visible,
+.viora-carousel__dot:focus-visible {
+  outline: 2px solid var(--viora-focus-ring);
+  outline-offset: 2px;
+}
+
+.viora-carousel__dots {
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+  padding: 12px 0 0;
+}
+
+.viora-carousel__dot {
+  width: 8px;
+  height: 8px;
+  padding: 0;
+  border: none;
+  border-radius: var(--viora-radius-full);
+  background-color: var(--viora-border);
+  cursor: pointer;
+  transition: background-color var(--viora-transition-fast), width var(--viora-transition-fast);
+}
+
+.viora-carousel__dot[aria-current="true"] {
+  width: 20px;
+  background-color: var(--viora-primary);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .viora-carousel__track,
+  .viora-carousel__arrow,
+  .viora-carousel__dot {
+    transition: none;
+  }
+}
