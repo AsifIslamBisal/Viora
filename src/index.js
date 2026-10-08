@@ -36,5 +36,6 @@ export { NumberInput } from "./components/NumberInput/NumberInput";
 export { AvatarGroup } from "./components/AvatarGroup/AvatarGroup";
 export { Slider } from "./components/Slider/Slider";
 export { Stat } from "./components/Stat/Stat";
+export { Drawer } from "./components/Drawer/Drawer";
 
 export const VERSION = "0.1.0";

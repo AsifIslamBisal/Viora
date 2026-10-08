@@ -1,0 +1,120 @@
+.viora-drawer {
+  box-sizing: border-box;
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  background-color: rgba(16, 24, 40, 0.5);
+}
+
+.viora-drawer__panel {
+  box-sizing: border-box;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--viora-surface);
+  box-shadow: var(--viora-shadow-lg);
+  outline: none;
+  animation: viora-drawer-slide-right 150ms ease;
+}
+
+.viora-drawer__panel--left {
+  left: 0;
+  animation-name: viora-drawer-slide-left;
+  border-right: 1px solid var(--viora-border);
+}
+
+.viora-drawer__panel--right {
+  right: 0;
+  border-left: 1px solid var(--viora-border);
+}
+
+.viora-drawer__header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--viora-spacing-md);
+  padding: var(--viora-spacing-lg);
+  padding-bottom: var(--viora-spacing-md);
+  border-bottom: 1px solid var(--viora-border);
+}
+
+.viora-drawer__title {
+  margin: 0;
+  font-family: var(--viora-font-family);
+  font-size: var(--viora-font-size-xl);
+  font-weight: 650;
+  line-height: 1.25;
+  color: var(--viora-foreground);
+}
+
+.viora-drawer__description {
+  margin: var(--viora-spacing-xs) 0 0;
+  font-family: var(--viora-font-family);
+  font-size: var(--viora-font-size-sm);
+  color: var(--viora-muted-foreground);
+}
+
+.viora-drawer__close {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: none;
+  width: 28px;
+  height: 28px;
+  padding: 0;
+  border: none;
+  border-radius: var(--viora-radius-md);
+  background: transparent;
+  color: var(--viora-muted-foreground);
+  cursor: pointer;
+  transition: background-color var(--viora-transition-fast),
+    color var(--viora-transition-fast);
+}
+
+.viora-drawer__close svg {
+  width: 16px;
+  height: 16px;
+}
+
+.viora-drawer__close:hover {
+  background-color: var(--viora-secondary);
+  color: var(--viora-foreground);
+}
+
+.viora-drawer__close:focus-visible {
+  outline: 2px solid var(--viora-focus-ring);
+  outline-offset: 2px;
+}
+
+.viora-drawer__content {
+  flex: 1;
+  overflow-y: auto;
+  padding: var(--viora-spacing-lg);
+  font-family: var(--viora-font-family);
+}
+
+@keyframes viora-drawer-slide-right {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes viora-drawer-slide-left {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .viora-drawer__panel {
+    animation: none;
+  }
+}
