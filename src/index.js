@@ -56,5 +56,6 @@ export { Stepper } from "./components/Stepper/Stepper";
 export { Timeline } from "./components/Timeline/Timeline";
 export { NotificationBanner } from "./components/NotificationBanner/NotificationBanner";
 export { EmptyState } from "./components/EmptyState/EmptyState";
+export { SegmentedControl } from "./components/SegmentedControl/SegmentedControl";
 
 export const VERSION = "0.1.0";

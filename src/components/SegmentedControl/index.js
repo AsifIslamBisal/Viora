@@ -1,0 +1,1 @@
+export { SegmentedControl, default } from "./SegmentedControl";

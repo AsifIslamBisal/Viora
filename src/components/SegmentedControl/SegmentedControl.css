@@ -1,0 +1,63 @@
+.viora-segmented {
+  box-sizing: border-box;
+  display: inline-flex;
+  padding: 3px;
+  gap: 2px;
+  border: 1px solid var(--viora-border);
+  border-radius: var(--viora-radius-md);
+  background-color: var(--viora-secondary);
+  font-family: var(--viora-font-family);
+}
+
+.viora-segmented__option {
+  padding: 5px 14px;
+  border: none;
+  border-radius: var(--viora-radius-sm);
+  background: none;
+  font-family: inherit;
+  font-size: var(--viora-font-size-sm);
+  font-weight: 500;
+  color: var(--viora-muted-foreground);
+  cursor: pointer;
+  transition: background-color var(--viora-transition-fast), color var(--viora-transition-fast);
+}
+
+.viora-segmented__option:hover:not(:disabled) {
+  color: var(--viora-foreground);
+}
+
+.viora-segmented__option--selected {
+  background-color: var(--viora-surface);
+  color: var(--viora-foreground);
+  box-shadow: 0 1px 3px rgb(0 0 0 / 0.1);
+}
+
+.viora-segmented__option:focus-visible {
+  outline: 2px solid var(--viora-focus-ring);
+  outline-offset: 1px;
+}
+
+.viora-segmented__option:disabled {
+  cursor: default;
+  opacity: 0.45;
+}
+
+.viora-segmented--sm .viora-segmented__option {
+  padding: 3px 10px;
+  font-size: var(--viora-font-size-xs);
+}
+
+.viora-segmented--lg .viora-segmented__option {
+  padding: 8px 18px;
+  font-size: var(--viora-font-size-md);
+}
+
+.viora-segmented--disabled {
+  opacity: 0.6;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .viora-segmented__option {
+    transition: none;
+  }
+}
