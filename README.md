@@ -20,29 +20,33 @@ npm install
 ## Scripts
 
 ```bash
-npm run dev             # start Storybook
+npm run dev             # start the showcase app
 npm run test            # run tests once
 npm run test:watch      # run tests in watch mode
 npm run lint            # run ESLint
 npm run build           # build the library into dist/
-npm run build-storybook # build static Storybook
+npm run preview         # preview the production build
 ```
+
+## Showcase
+
+`npm run dev` opens a single-page showcase (no Storybook). A sidebar lists every component by category; selecting one shows a live demo plus copy-ready **Usage**, **JSX** and **CSS** tabs so you can paste a component straight into your own project.
 
 ## Project structure
 
 ```text
 src/
 ├── components/   # components (added per milestone)
+├── showcase/     # single-page showcase app (gallery + copy-ready code)
 ├── hooks/        # reusable React hooks
 ├── utils/        # shared helpers
-├── stories/      # documentation stories
 ├── styles/       # tokens.css + index.css
 └── index.js      # public package entry
 ```
 
 ## Component inventory
 
-Built over milestones 1–59: **64 public exports** across **60 components**, backed by **60 test suites** (803 passing tests). Every milestone ships with lint, unit tests, a library build, and a Storybook build all green.
+Built over milestones 1–59: **64 public exports** across **60 components**, backed by **60 test suites** (803 passing tests). Every milestone ships with lint, unit tests, and a library build all green.
 
 ### Actions
 
