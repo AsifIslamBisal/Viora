@@ -15,6 +15,6 @@ export default defineConfig({
     },
     cssCodeSplit: false,
     sourcemap: true,
-    minify: "esbuild",
+    minify: "oxc",
   },
 });
