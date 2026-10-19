@@ -11,6 +11,8 @@ function getInitialTheme() {
     : "light";
 }
 
+const categorySlug = (name) => name.toLowerCase().replace(/\s+/g, "-");
+
 export function App() {
   const [theme, setTheme] = useState(getInitialTheme);
   const [query, setQuery] = useState("");
@@ -104,7 +106,10 @@ export function App() {
         >
           <nav aria-label="Components">
             {filtered.map((cat) => (
-              <div className="vx-nav-group" key={cat.name}>
+              <div
+                className={`vx-nav-group vx-nav-group--${categorySlug(cat.name)}`}
+                key={cat.name}
+              >
                 <p className="vx-nav-group__title">{cat.name}</p>
                 <ul>
                   {cat.items.map((item) => (
@@ -136,17 +141,34 @@ export function App() {
 
         <main className="vx-main" id="top">
           <div className="vx-main__inner">
-            <div className="vx-detail__head">
-              <span className="vx-detail__category">{selected.category}</span>
+            <div
+              className={`vx-detail__head vx-detail__head--${categorySlug(
+                selected.category
+              )}`}
+            >
+              <span
+                className={`vx-detail__category vx-detail__category--${categorySlug(
+                  selected.category
+                )}`}
+              >
+                {selected.category}
+              </span>
               <h1 className="vx-detail__title">{selected.name}</h1>
               <p className="vx-detail__desc">{selected.description}</p>
             </div>
 
-            <section className="vx-stage" aria-label={`${selected.name} live demo`}>
-              <selected.Demo />
+            <section
+              className={`vx-stage vx-stage--${categorySlug(selected.category)}`}
+              aria-label={`${selected.name} live demo`}
+            >
+              <span className="vx-stage__glow vx-stage__glow--one" aria-hidden="true" />
+              <span className="vx-stage__glow vx-stage__glow--two" aria-hidden="true" />
+              <div className="vx-stage__view" key={selected.id}>
+                <selected.Demo />
+              </div>
             </section>
 
-            <CodePanel component={selected} />
+            <CodePanel key={selected.id} component={selected} />
           </div>
         </main>
       </div>

@@ -13,6 +13,12 @@ import { Heading } from "../../components/Heading/Heading.jsx";
 import { Text } from "../../components/Text/Text.jsx";
 import { Link } from "../../components/Link/Link.jsx";
 import { Kbd } from "../../components/Kbd/Kbd.jsx";
+import {
+  Photo,
+  CARD_COVER,
+  EMPTY_STATE_ART,
+  AVATAR_PHOTOS,
+} from "../media.jsx";
 
 import tableJsx from "../../components/Table/Table.jsx?raw";
 import tableCss from "../../components/Table/Table.css?raw";
@@ -120,10 +126,17 @@ const ListDemo = () => (
 const CardDemo = () => (
   <div style={{ ...stack, maxWidth: 420 }}>
     <Card
+      className="vx-card-shot"
       title="Weekly report"
       description="Your team's activity over the last seven days."
       footer={<Link href="#">View details</Link>}
     >
+      <Photo
+        className="vx-cover"
+        src={CARD_COVER.src}
+        tones={CARD_COVER.tones}
+        alt="Team dashboard preview"
+      />
       <Text>42 commits · 8 pull requests · 3 releases</Text>
     </Card>
   </div>
@@ -131,6 +144,12 @@ const CardDemo = () => (
 
 const EmptyStateDemo = () => (
   <div style={{ ...stack, maxWidth: 480 }}>
+    <Photo
+      className="vx-empty-art"
+      src={EMPTY_STATE_ART.src}
+      tones={EMPTY_STATE_ART.tones}
+      alt="Empty workspace illustration"
+    />
     <EmptyState
       title="No projects yet"
       message="Create your first project to start organizing work."
@@ -140,19 +159,23 @@ const EmptyStateDemo = () => (
 );
 
 const AvatarDemo = () => (
-  <div style={{ display: "flex", gap: 12, alignItems: "center" }}>
-    <Avatar name="Ali Rahman" size="sm" />
-    <Avatar name="Bisha Karim" size="md" status="online" />
-    <Avatar name="Chris Vale" size="lg" />
+  <div className="vx-avatar-row">
+    {AVATAR_PHOTOS.slice(0, 3).map((person, index) => (
+      <Avatar
+        key={person.name}
+        name={person.name}
+        src={person.src}
+        size={index === 0 ? "sm" : index === 1 ? "md" : "lg"}
+        status={index === 1 ? "online" : undefined}
+      />
+    ))}
   </div>
 );
 
 const AvatarGroupDemo = () => (
-  <AvatarGroup
-    size="md"
-    max={4}
-    avatars={[{ name: "Ali Rahman" }, { name: "Bisha Karim" }, { name: "Chris Vale" }, { name: "Dana Iqbal" }, { name: "Emre Ali" }]}
-  />
+  <div className="vx-avatar-row">
+    <AvatarGroup size="md" max={4} avatars={AVATAR_PHOTOS} />
+  </div>
 );
 
 const TypographyDemo = () => (

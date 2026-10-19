@@ -6,6 +6,7 @@ import { Pagination } from "../../components/Pagination/Pagination.jsx";
 import { Carousel } from "../../components/Carousel/Carousel.jsx";
 import { Stepper } from "../../components/Stepper/Stepper.jsx";
 import { Timeline } from "../../components/Timeline/Timeline.jsx";
+import { Photo, CAROUSEL_SCENES, TABS_PHOTO, sceneSrc } from "../media.jsx";
 
 import breadcrumbJsx from "../../components/Breadcrumb/Breadcrumb.jsx?raw";
 import breadcrumbCss from "../../components/Breadcrumb/Breadcrumb.css?raw";
@@ -36,7 +37,16 @@ const BreadcrumbDemo = () => (
 );
 
 const tabItems = [
-  { value: "overview", label: "Overview", content: <p style={{ margin: 0 }}>A high-level summary of the project.</p> },
+  {
+    value: "overview",
+    label: "Overview",
+    content: (
+      <div className="vx-tab-shot">
+        <Photo src={TABS_PHOTO.src} tones={TABS_PHOTO.tones} alt="Project overview" />
+        <p style={{ margin: 0 }}>A high-level summary of the project.</p>
+      </div>
+    ),
+  },
   { value: "activity", label: "Activity", content: <p style={{ margin: 0 }}>Recent commits, issues and discussions.</p> },
   { value: "settings", label: "Settings", content: <p style={{ margin: 0 }}>Manage access, permissions and integrations.</p> },
 ];
@@ -78,22 +88,26 @@ function PaginationDemoInner() {
 }
 const PaginationDemo = () => <PaginationDemoInner />;
 
-const slideStyle = {
-  display: "grid",
-  placeItems: "center",
-  height: 180,
-  borderRadius: 12,
-  color: "#fff",
-  fontWeight: 700,
-  fontSize: "1.25rem",
-};
-
 const CarouselDemo = () => (
-  <div style={{ ...stack, maxWidth: 520 }}>
-    <Carousel autoPlay ariaLabel="Feature highlights">
-      <div style={{ ...slideStyle, background: "linear-gradient(135deg,#6366f1,#4338ca)" }}>Fast</div>
-      <div style={{ ...slideStyle, background: "linear-gradient(135deg,#0ea5e9,#0284c7)" }}>Accessible</div>
-      <div style={{ ...slideStyle, background: "linear-gradient(135deg,#16a34a,#15803d)" }}>Composable</div>
+  <div style={{ ...stack, maxWidth: 560 }}>
+    <Carousel autoPlay interval={5000} ariaLabel="Feature highlights">
+      {CAROUSEL_SCENES.map((scene) => (
+        <Photo
+          key={scene.seed}
+          className="vx-slide"
+          src={sceneSrc(scene)}
+          tones={scene.tones}
+          alt={scene.title}
+        >
+          <span className="vx-slide__tag" style={{ background: scene.tones[0] }}>
+            {scene.tag}
+          </span>
+          <span className="vx-slide__copy">
+            <strong>{scene.title}</strong>
+            <small>{scene.caption}</small>
+          </span>
+        </Photo>
+      ))}
     </Carousel>
   </div>
 );
